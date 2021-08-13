@@ -6,6 +6,14 @@ module.exports = {
   themeConfig: {
     home: "/readme.md",
     logo: "https://vuejs.org/images/logo.png",
+    sidebarDepth: 2,
+    repo: "GuoJikun/blog-vuepress",
+    repoLabel: "GITHUB",
+    toggleDarkMode: "切换夜间模式",
+    lastUpdatedText: "最后更新时间",
+    contributorsText: "贡献者",
+    editLinkText: "编辑",
+    docsDir: "src",
     navbar: [
       // NavbarItem
       {
@@ -14,8 +22,8 @@ module.exports = {
       },
       // NavbarGroup
       {
-        text: "Components",
-        link: "/components/preview-image",
+        text: "Vue",
+        link: "/vue/directives/copy.md",
       },
       {
         text: "数据结构与算法",
@@ -28,6 +36,14 @@ module.exports = {
           text: "HTML & CSS",
           children: [
             {
+              text: "Filter 滤镜",
+              link: "/basic/filter.md",
+            },
+            {
+              text: "Cursor 鼠标样式",
+              link: "/basic/cursor.md",
+            },
+            {
               text: "Intersection Observer",
               link: "/basic/intersection-observer.md",
             },
@@ -39,6 +55,14 @@ module.exports = {
             {
               text: "Cookie 缓存",
               link: "/basic/cookie.md",
+            },
+            {
+              text: "Decorator 装饰器",
+              link: "/basic/decorator.md",
+            },
+            {
+              text: "编解码",
+              link: "/basic/encode.md",
             },
           ],
         },
@@ -56,10 +80,19 @@ module.exports = {
           ],
         },
       ],
-      "/components/": [
+      "/vue/": [
         {
-          text: "图片预览",
-          link: "/components/preview-image.vue",
+          text: "指令",
+          children: [
+            {
+              text: "图片预览",
+              link: "/vue/directives/copy.vue",
+            },
+          ],
+        },
+        {
+          text: "组件",
+          link: "/vue/preview-image.vue",
         },
       ],
       "/data-structure/": [
