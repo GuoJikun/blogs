@@ -36,7 +36,7 @@ jobs:
         run: npm install
 
       - name: 打包
-        run: npm run build
+        run: npx vuepress info && npm run build
 
       # 配置git用户名和邮箱
       - name: 配置git
