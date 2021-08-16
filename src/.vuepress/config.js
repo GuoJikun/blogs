@@ -158,9 +158,8 @@ module.exports = {
   },
   dest: "docs",
   bundlerConfig: {
-    configureWebpack: (config) => {
-      const mainFields = config.resolve.mainFields;
-      config.resolve.mainFields = [...mainFields, "main", "module"];
+    chainWebpack(config) {
+      config.resolve.mainFields.add("main").add("module");
       return config;
     },
   },

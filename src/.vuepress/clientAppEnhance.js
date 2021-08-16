@@ -4,7 +4,7 @@ import "element-plus/lib/theme-chalk/index.css";
 
 import Copy from "./directives/copy.js";
 
-export default defineClientAppEnhance(({ app, router, siteData }) => {
+export default defineClientAppEnhance(({ app }) => {
   // ...
   app.use(ElementPlus);
   app.use(Copy);
