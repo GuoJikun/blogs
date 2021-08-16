@@ -1,0 +1,43 @@
+# This is a basic workflow to help you get started with Actions
+
+name: 自定部署文档
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: 安装依赖
+        run: npm i
+
+      # Runs a set of commands using the runners shell
+      - name: 配置git
+        run: git config --global user.email "guojikun486546@163.com" && git config --global user.name "GuoJikun"
+        
+      - name: 打包
+        env:
+          BRANCH: gh-pages
+        run: yarn run build
+      - name: 部署文档到gh-pages
+        env:
+          ACCESS_TOKEN: ${{ secrets.git_token }}
+        run: cd docs && git init && git add -A && git commit -m "deploy" && git push -f https://$ACCESS_TOKEN@github.com/guojikun/blog-vuepress.git main:gh-pages
