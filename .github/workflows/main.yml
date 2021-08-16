@@ -36,7 +36,7 @@ jobs:
       - name: 打包
         env:
           BRANCH: gh-pages
-        run: yarn run build
+        run: npm run build
       - name: 部署文档到gh-pages
         env:
           ACCESS_TOKEN: ${{ secrets.git_token }}
