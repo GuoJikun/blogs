@@ -29,6 +29,10 @@ module.exports = {
         text: "数据结构与算法",
         link: "/data-structure/list.md",
       },
+      {
+        text: "其他",
+        link: "/other/wsl.md",
+      },
     ],
     sidebar: {
       "/basic/": [
@@ -46,6 +50,10 @@ module.exports = {
             {
               text: "Intersection Observer",
               link: "/basic/intersection-observer.md",
+            },
+            {
+              text: "Canvas",
+              link: "/basic/canvas.md",
             },
           ],
         },
@@ -133,6 +141,12 @@ module.exports = {
               link: "/data-structure/sort.md",
             },
           ],
+        },
+      ],
+      "/other/": [
+        {
+          text: "win11安装wslg",
+          link: "/other/wsl.md",
         },
       ],
     },
