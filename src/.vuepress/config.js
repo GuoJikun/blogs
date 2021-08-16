@@ -157,10 +157,4 @@ module.exports = {
     },
   },
   dest: "docs",
-  bundlerConfig: {
-    chainWebpack(config) {
-      config.resolve.mainFields.add("main").add("module");
-      return config;
-    },
-  },
 };

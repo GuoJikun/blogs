@@ -20,6 +20,11 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -27,7 +32,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: 安装依赖
-        run: npm install npm && npm install
+        run: npm install
 
       - name: 打包
         run: npm run build
