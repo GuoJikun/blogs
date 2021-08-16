@@ -34,14 +34,13 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
 
       # Runs a single command using the runners shell
       - name: 安装依赖
-        run: npm install
+        run: yarn
 
       - name: 打包
-        run: npx vuepress info && npm run build
+        run: npx vuepress info && yarn run build
 
       # 配置git用户名和邮箱
       - name: 配置git

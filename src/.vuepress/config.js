@@ -151,16 +151,5 @@ module.exports = {
       ],
     },
   },
-  markdown: {
-    code: {
-      lineNumbers: 12,
-    },
-  },
   dest: "docs",
-  bundlerConfig: {
-    chainWebpack(config) {
-      config.resolve.mainFields.add("main").add("module");
-      return config;
-    },
-  },
 };
