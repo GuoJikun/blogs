@@ -12,7 +12,7 @@ module.exports = {
     toggleDarkMode: "切换夜间模式",
     lastUpdatedText: "最后更新时间",
     contributorsText: "贡献者",
-    editLinkText: "编辑",
+    editLinkText: "在 Github 上编辑",
     docsDir: "src",
     navbar: [
       // NavbarItem
@@ -84,6 +84,22 @@ module.exports = {
             {
               text: "ECMA 2020",
               link: "/basic/ecma/2020.md",
+            },
+            {
+              text: "ECMA 2019",
+              link: "/basic/ecma/2019.md",
+            },
+            {
+              text: "ECMA 2018",
+              link: "/basic/ecma/2018.md",
+            },
+            {
+              text: "ECMA 2017",
+              link: "/basic/ecma/2017.md",
+            },
+            {
+              text: "ECMA 2016",
+              link: "/basic/ecma/2016.md",
             },
           ],
         },
