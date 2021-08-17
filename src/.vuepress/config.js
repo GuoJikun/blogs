@@ -11,6 +11,7 @@ module.exports = {
     repoLabel: "GITHUB",
     toggleDarkMode: "切换夜间模式",
     lastUpdatedText: "最后更新时间",
+    contributors: false,
     contributorsText: "贡献者",
     editLinkText: "在 Github 上编辑",
     docsDir: "src",
