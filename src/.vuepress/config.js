@@ -19,7 +19,7 @@ module.exports = {
       // NavbarItem
       {
         text: "Basic",
-        link: "/basic/cookie.md",
+        link: "/basic/filter.md",
       },
       // NavbarGroup
       {
@@ -56,6 +56,10 @@ module.exports = {
               text: "Canvas",
               link: "/basic/canvas.md",
             },
+            {
+              text: "WebComponent",
+              link: "/basic/web-component.md",
+            },
           ],
         },
         {
@@ -72,6 +76,10 @@ module.exports = {
             {
               text: "编解码",
               link: "/basic/encode.md",
+            },
+            {
+              text: "Utils 工具函数",
+              link: "/basic/utils.md",
             },
           ],
         },
@@ -118,6 +126,10 @@ module.exports = {
         {
           text: "组件",
           link: "/vue/preview-image.vue",
+        },
+        {
+          text: "env 配置文件",
+          link: "/vue/env.md",
         },
       ],
       "/data-structure/": [
