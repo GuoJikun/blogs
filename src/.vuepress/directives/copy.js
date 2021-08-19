@@ -1,4 +1,4 @@
-const copy = {
+export const copy = {
   mounted(el, { value }) {
     el.$value = value || el.textContent;
     el.handler = () => {
@@ -15,23 +15,13 @@ const copy = {
       // 选中值并复制
       textarea.select();
       const result = document.execCommand("Copy");
-      const copySuccessCb = el.getAttribute("copy-success"); // 自定义复制成功的文案
-      const copyErrorCb = el.getAttribute("copy-success"); // 自定义复制失败的文案
 
-      if (result) {
-        if (copySuccessCb) {
-          copySuccessCb(el.$value);
-        } else {
-          console.log("复制成功");
-        }
-      } else {
-        // eslint-disable-next-line no-lonely-if
-        if (copyErrorCb) {
-          copyErrorCb();
-        } else {
-          console.log("复制失败");
-        }
-      }
+      el.dispatchEvent(
+        new CustomEvent("clipboard-copy", {
+          detail: { status: result, value: el.$value },
+        })
+      );
+
       document.body.removeChild(textarea);
     };
     // 绑定点击事件，就是所谓的一键 copy 啦

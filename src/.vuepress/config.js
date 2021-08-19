@@ -118,8 +118,8 @@ module.exports = {
           text: "指令",
           children: [
             {
-              text: "图片预览",
-              link: "/vue/directives/copy.vue",
+              text: "Copy 复制",
+              link: "/vue/directives/copy.md",
             },
           ],
         },

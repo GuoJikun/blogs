@@ -1,8 +1,20 @@
 # Copy 复制
 
-## 基础用法
+## 用法 1
 
-<el-button v-copy="'被复制的内容'" :copy-success="copySuccess" type="primary" size="small">点击复制</el-button>
+通过复制指令的 binding.value
+
+<el-button type="primary" size="medium" v-copy="`通过指令提供值`" @clipboard-copy="copySuccess">
+通过指令提供值
+</el-button>
+
+## 用法 2
+
+复制元素的 textContent
+
+<el-button type="primary" size="medium" v-copy @clipboard-copy="copySuccess">
+通过 textContent 属性复制
+</el-button>
 
 <script>
 // import Copy from '@/directives/copy.js'
@@ -23,7 +35,9 @@ export default defineComponent({
             ],
         })
 
-        const copySuccess = (val) => {
+        const copySuccess = (ev) => {
+            console.log(ev)
+            const val = ev.detail.value
             ElMessage.success(`复制成功，复制的内容：${val}`)
         }
 
