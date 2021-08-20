@@ -72,3 +72,21 @@ const colorBlend = (c1, c2, ratio) => {
   return `#${r}${g}${b}`;
 };
 ```
+
+## 判断变量的类型
+
+```js
+/**
+ * 判断参数的类型
+ * @param {*} arg 被判断的参数
+ * @returns {String} String类型
+ */
+function typeOf(arg) {
+  if (Number.isNaN(arg)) {
+    return "NaN";
+  } else {
+    const iniType = Object.prototype.toString.call(arg);
+    return iniType.replace(/^(\[object\s)([a-zA-Z]+)\]$/, "$2");
+  }
+}
+```

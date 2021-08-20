@@ -2,14 +2,20 @@ module.exports = {
   lang: "zh-CN",
   title: "前端小栈",
   description: "这是我的第一个 VuePress 站点",
-
+  markdown: {
+    anchor: {
+      level: [2, 3],
+    },
+    extractHeaders: {
+      level: [2, 3],
+    },
+  },
   themeConfig: {
     home: "/readme.md",
     logo: "https://vuejs.org/images/logo.png",
-    sidebarDepth: 2,
+    sidebarDepth: 3,
     repo: "GuoJikun/blog-vuepress",
     repoLabel: "GITHUB",
-    toggleDarkMode: "切换夜间模式",
     lastUpdatedText: "最后更新时间",
     contributors: false,
     contributorsText: "贡献者",
@@ -112,6 +118,7 @@ module.exports = {
             },
           ],
         },
+        { text: "获取滚动条宽度", link: "/basic/scrollbar-width.md" },
       ],
       "/vue/": [
         {
@@ -177,8 +184,30 @@ module.exports = {
           text: "win11安装wslg",
           link: "/other/wsl.md",
         },
+        {
+          text: "win10 激活",
+          link: "/other/activation-win10.md",
+        },
+        {
+          text: "Scoop 包管理器",
+          link: "/other/scoop.md",
+        },
       ],
     },
   },
   dest: "docs",
+
+  // 404 page
+  notFound: [
+    "这里什么都没有",
+    "我们怎么到这来了？",
+    "这是一个 404 页面",
+    "看起来我们进入了错误的链接",
+  ],
+  backToHome: "返回首页",
+
+  // a11y
+  openInNewWindow: "在新窗口打开",
+  toggleDarkMode: "切换夜间模式",
+  toggleSidebar: "切换侧边栏",
 };
