@@ -90,3 +90,116 @@ function typeOf(arg) {
   }
 }
 ```
+
+## 对象转 Map
+
+```js
+function object2map(obj) {
+  return new Map(Object.entries(obj));
+}
+```
+
+## 数组扁平化
+
+```js
+/**
+ * @name flat
+ * @description 数组扁平化
+ * @param {Array} arr 要进行扁平化的数组
+ * @param {Number} depth 深度
+ */
+export const flat = (arr, depth = 1) => {
+  if (Array.prototype.flat) {
+    return arr.flat(depth);
+  } else {
+    let res = [],
+      depthNum = 0,
+      flatMap = (item) => {
+        item.map((element, index, array) => {
+          if (
+            Object.prototype.toString.call(element).slice(8, -1) === "Array"
+          ) {
+            if (depthNum < depth) {
+              depthNum++;
+              flatMap(element);
+            } else {
+              res.push(element);
+            }
+          } else {
+            res.push(element);
+            if (index === array.length - 1) depthNum = 0;
+          }
+        });
+      };
+    flatMap(arr);
+    return res;
+  }
+};
+```
+
+## 变量的类型
+
+```js
+/**
+ * 判断变量的类型
+ * @param {*} arg 被判断的参数
+ * @returns {String} String类型
+ */
+export function typeOf(arg) {
+  if (Number.isNaN(arg)) {
+    return "NaN";
+  } else {
+    const iniType = Object.prototype.toString.call(arg);
+    return iniType.replace(/^(\[object\s)([a-zA-Z]+)\]$/, "$2");
+  }
+}
+```
+
+## element-ui table 合计
+
+> `el-table-column` 必须有 `prop` 属性
+
+```js
+/**
+ * 表格求和
+ * @param {Array} data 求和的数据
+ * @param {String} prop 求和的字段名
+ * @param {Array} allowList 求和的字段
+ * @param {String} prev 放在合计结果前后的字符
+ * @param {String} type prev 的位置
+ */
+export const tableSum = (
+  data = [],
+  prop = "",
+  allowList = [],
+  prev = "",
+  type = "prev"
+) => {
+  let sum = 0;
+  if (allowList.includes(prop)) {
+    const values = data.map((item) => Number(item[prop]));
+    let dotLen = 0;
+    sum = values.reduce((prev, curr) => {
+      const value = Number(curr);
+      if (!isNaN(value)) {
+        const tmp = String(value);
+        if (tmp.includes(".")) {
+          const len = tmp.split(".")[1].length;
+          dotLen = len > dotLen ? len : dotLen;
+        }
+        return prev + curr;
+      } else {
+        return prev;
+      }
+    }, 0);
+    if (type === "prev") {
+      sum = `${prev}${parseFloat(sum.toFixed(dotLen))}`;
+    } else {
+      sum += prev;
+    }
+  } else {
+    return "";
+  }
+  return sum;
+};
+```
