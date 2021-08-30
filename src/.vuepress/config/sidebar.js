@@ -85,6 +85,10 @@ module.exports = {
           text: "Copy 复制",
           link: "/vue/directives/copy.md",
         },
+        {
+          text: "ContentMenus 右键菜单",
+          link: "/vue/directives/content-menus.md",
+        },
       ],
     },
     {

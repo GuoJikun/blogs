@@ -1,5 +1,17 @@
-import { findBrothersElement } from "@/utils/dom.js";
-import { isFunction, isObject } from "@/utils/type.js";
+import { findBrothersElement } from "../utils/dom.js";
+import { isFunction, isObject } from "../utils/type.js";
+
+/**
+ * 给元素添加样式
+ * @param {HTMLElement} el 元素
+ * @param {Object} styleObject 样式
+ */
+const bindStyle = (el, styleObject = {}) => {
+  const tmp = Object.entries(styleObject);
+  for (let [key, value] of tmp) {
+    el.style[key] = value || null;
+  }
+};
 
 /**
  * 设置事件和hover样式
@@ -26,6 +38,7 @@ function addEvents(contentMenu, hoverStyle, fn) {
     if (nodeName === "li") {
       const brothers = findBrothersElement(target);
       brothers.map((ele) => {
+        console.log(ele, "ele");
         ele.style.backgroundColor = "#ffffff";
         ele.style.color = "#333";
       });
@@ -52,32 +65,21 @@ function addEvents(contentMenu, hoverStyle, fn) {
  * @param {Object} point 鼠标右键时的坐标
  */
 function createRootEle(point) {
+  const defaultStyle = {
+    position: "fixed",
+    top: point.y ? point.y + "px" : 0,
+    left: point.x ? point.x + "px" : 0,
+    zIndex: 9999,
+    backgroundColor: "#ffffff",
+    borderRadius: "4px",
+    overflow: "hidden",
+    boxShadow: "0px 0px 6px 1px rgba(0, 0, 0, 0.3)",
+    padding: "2px 0",
+  };
   const contentMenu = document.createElement("div");
-  contentMenu.style.position = "fixed";
-  contentMenu.style.top = point.y ? point.y + "px" : 0;
-  contentMenu.style.left = point.x ? point.x + "px" : 0;
-  contentMenu.style.zIndex = 999999;
-  contentMenu.style.backgroundColor = "#ffffff";
-  contentMenu.style.borderRadius = "4px";
-  contentMenu.style.overflow = "hidden";
-  contentMenu.style.boxShadow = "0px 0px 6px 1px rgba(0, 0, 0, 0.3)";
-  contentMenu.style.padding = "2px 0";
-
+  bindStyle(contentMenu, defaultStyle);
   contentMenu.id = "ivyMouseRightMenus";
-
   return contentMenu;
-}
-/**
- * 自定义样式
- * @param {*} root 根元素
- * @param {*} style 样式
- */
-function applyCustomStyleToRoot(root, style) {
-  const entries = Object.entries(style);
-
-  for (const [key, val] of entries) {
-    root.style[key] = val;
-  }
 }
 
 function createMenu(arr, hoverStyle) {
@@ -93,7 +95,11 @@ function createMenu(arr, hoverStyle) {
     return `<li style="line-height: 32px;padding: 0 12px;transition: color 0.3s, background-color 0.3s;background-color: transparent;cursor: pointer;" command="${command}">${name}</li>`;
   });
 
-  return `<ul style="list-style: none;margin: 0;">${menuList.join("")}</ul>`;
+  return [
+    '<ul style="list-style: none;margin: 0;padding: 0;">',
+    ...menuList,
+    `</ul>`,
+  ].join("");
 }
 
 function render(opts) {
@@ -109,7 +115,7 @@ function render(opts) {
   const rootEle = createRootEle(point);
   addEvents(rootEle, hoverStyle, cb);
   if (rootStyle) {
-    applyCustomStyleToRoot(rootEle, rootStyle);
+    bindStyle(rootEle, rootStyle);
   }
 
   const menuEle = createMenu(menuList);
@@ -122,7 +128,7 @@ function bodyClick(ev) {
   if (target) document.body.removeChild(target);
 }
 
-export default {
+export const contentMenu = {
   created(el, binding) {
     const data = binding.value;
     el.addEventListener("contextmenu", (ev) => {
@@ -144,5 +150,11 @@ export default {
     const target = document.getElementById("ivyMouseRightMenus");
     if (target) document.body.removeChild(target);
     document.body.removeEventListener("click", bodyClick);
+  },
+};
+
+export default {
+  install(app) {
+    app.directive("contentMenus", contentMenu);
   },
 };
