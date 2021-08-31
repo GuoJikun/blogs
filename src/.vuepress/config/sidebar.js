@@ -44,6 +44,10 @@ module.exports = {
           text: "Utils 工具函数",
           link: "/basic/utils.md",
         },
+        {
+          text: "浏览器多窗口通讯",
+          link: "/basic/multi-window-communication.md",
+        },
       ],
     },
     {
