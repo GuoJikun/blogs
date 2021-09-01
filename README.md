@@ -14,7 +14,7 @@
 ## 快速开始
 
 ```bash
-- Clone the https://github.com/GuoJikun/blogs.git
+- Clone the https://github.com/GuoJikun/blog-vuepress.git
 - Install package yarn install
 - Development run yarn run dev
 - Open http://localhost:8080 in your browser.
