@@ -16,6 +16,20 @@
     <div>在此区域内可以显示自定义菜单</div>
 </div>
 
+```vue
+<div v-contentMenus="contentMenuList" style="line-height: 34px">
+    <div>在此区域内可以显示自定义菜单</div>
+    <div>在此区域内可以显示自定义菜单</div>
+    <div>在此区域内可以显示自定义菜单</div>
+    <div>在此区域内可以显示自定义菜单</div>
+    <div>在此区域内可以显示自定义菜单</div>
+    <div>在此区域内可以显示自定义菜单</div>
+    <div>在此区域内可以显示自定义菜单</div>
+    <div>在此区域内可以显示自定义菜单</div>
+    <div>在此区域内可以显示自定义菜单</div>
+</div>
+```
+
 ## 自定义菜单的样式
 
 可以使绑定指令的元素在页面加载后自动获得焦点
@@ -31,6 +45,20 @@
     <div>菜单撒付付付付付</div>
     <div>菜单撒付付付付付</div>
 </div>
+
+```vue
+<div v-contentMenus="contentMenuListCustom" style="line-height: 34px">
+    <div>菜单撒付付付付付</div>
+    <div>菜单撒付付付付付</div>
+    <div>菜单撒付付付付付</div>
+    <div>菜单撒付付付付付</div>
+    <div>菜单撒付付付付付</div>
+    <div>菜单撒付付付付付</div>
+    <div>菜单撒付付付付付</div>
+    <div>菜单撒付付付付付</div>
+    <div>菜单撒付付付付付</div>
+</div>
+```
 
 <script>
 import {reactive, toRefs, defineComponent} from 'vue';

@@ -129,7 +129,7 @@ function bodyClick(ev) {
 }
 
 export const contentMenu = {
-  created(el, binding) {
+  mounted(el, binding) {
     const data = binding.value;
     el.addEventListener("contextmenu", (ev) => {
       ev.preventDefault();
@@ -142,8 +142,6 @@ export const contentMenu = {
       if (target) document.body.removeChild(target);
       render(data);
     });
-  },
-  mounted() {
     document.body.addEventListener("click", bodyClick);
   },
   unmounted() {
