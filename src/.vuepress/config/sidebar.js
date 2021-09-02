@@ -48,6 +48,10 @@ module.exports = {
           text: "浏览器多窗口通讯",
           link: "/basic/multi-window-communication.md",
         },
+        {
+          text: "MutationObserver API",
+          link: "/basic/js/mutation-observer.md",
+        },
       ],
     },
     {
