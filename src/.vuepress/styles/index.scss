@@ -1,0 +1,14 @@
+.sidebar-heading {
+  font-weight: 500;
+  font-size: 16px;
+}
+a.sidebar-item.sidebar-heading.active {
+  font-weight: 500;
+  border-left: none;
+  border-right: 0.2rem solid var(--c-text-accent);
+}
+a.sidebar-item.active {
+  font-weight: 500;
+  border-left: none;
+  border-right: 0.2rem solid var(--c-text-accent);
+}
