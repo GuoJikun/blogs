@@ -107,6 +107,10 @@ module.exports = {
       text: "env 配置文件",
       link: "/vue/env.md",
     },
+    {
+      text: "vueCli项目添加vite支持",
+      link: "/vue/p202109101.md",
+    },
   ],
   "/data-structure/": [
     {
