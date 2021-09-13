@@ -101,7 +101,12 @@ module.exports = {
     },
     {
       text: "组件",
-      link: "/vue/preview-image.vue",
+      children: [
+        {
+          text: "ContentMenu 右键菜单",
+          link: "/vue/component/content-menu.md",
+        },
+      ],
     },
     {
       text: "env 配置文件",

@@ -1,5 +1,6 @@
 const sidebar = require("./config/sidebar.js");
 const navbar = require("./config/nav.js");
+const { path } = require("@vuepress/utils");
 
 module.exports = {
   lang: "zh-CN",
@@ -42,4 +43,13 @@ module.exports = {
   openInNewWindow: "在新窗口打开",
   toggleDarkMode: "切换夜间模式",
   toggleSidebar: "切换侧边栏",
+
+  plugins: [
+    [
+      "@vuepress/register-components",
+      {
+        componentsDir: path.resolve(__dirname, "./components"),
+      },
+    ],
+  ],
 };
