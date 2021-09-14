@@ -23,6 +23,10 @@ module.exports = {
           text: "WebComponent",
           link: "/basic/web-component.md",
         },
+        {
+          text: "Scss之extend和mixin",
+          link: "/basic/p2021091401.md",
+        },
       ],
     },
     {
@@ -30,27 +34,31 @@ module.exports = {
       children: [
         {
           text: "Cookie 缓存",
-          link: "/basic/cookie.md",
+          link: "/basic/js/cookie.md",
         },
         {
           text: "Decorator 装饰器",
-          link: "/basic/decorator.md",
+          link: "/basic/js/decorator.md",
         },
         {
           text: "编解码",
-          link: "/basic/encode.md",
+          link: "/basic/js/encode.md",
         },
         {
           text: "Utils 工具函数",
-          link: "/basic/utils.md",
+          link: "/basic/js/utils.md",
         },
         {
           text: "浏览器多窗口通讯",
-          link: "/basic/multi-window-communication.md",
+          link: "/basic/js/multi-window-communication.md",
         },
         {
           text: "MutationObserver API",
           link: "/basic/js/mutation-observer.md",
+        },
+        {
+          text: "手写new,bind,call,apply",
+          link: "/basic/js/p2021091402.md",
         },
       ],
     },
