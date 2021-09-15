@@ -122,6 +122,10 @@ module.exports = {
           text: "ContentMenu 右键菜单",
           link: "/vue/component/content-menu.md",
         },
+        {
+          text: "Barcode 条形码",
+          link: "/vue/component/barcode.md",
+        },
       ],
     },
     {
