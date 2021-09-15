@@ -3,17 +3,15 @@ lockfileVersion: 5.3
 specifiers:
   '@vuepress/plugin-register-components': ^2.0.0-beta.26
   element-plus: ^1.0.2-beta.71
-  patch-vue-directive-ssr: ^0.0.1
   vuepress: ^2.0.0-beta.26
-  yak-barcode: ^1.0.5
+  yak-barcode: ^1.0.6
 
 dependencies:
   element-plus: 1.0.2-beta.71
-  yak-barcode: 1.0.5
+  yak-barcode: 1.0.6
 
 devDependencies:
   '@vuepress/plugin-register-components': 2.0.0-beta.26
-  patch-vue-directive-ssr: 0.0.1
   vuepress: 2.0.0-beta.26
 
 packages:
@@ -2204,6 +2202,11 @@ packages:
       esprima: 4.0.1
     dev: true
 
+  /jsbarcode/3.11.5:
+    resolution: {integrity: sha512-zv3KsH51zD00I/LrFzFSM6dst7rDn0vIMzaiZFL7qusTjPZiPtxg3zxetp0RR7obmjTw4f6NyGgbdkBCgZUIrA==}
+    hasBin: true
+    dev: false
+
   /json-parse-better-errors/1.0.2:
     resolution: {integrity: sha512-mrqyZKfX5EhL7hvqcV6WG1yYjnjeuYDzDhhcAAUrq8Po85NBQBJP+ZDUT75qZQ98IkUoBqdkExkukOU7Ts2wrw==}
     dev: true
@@ -2694,11 +2697,6 @@ packages:
     dependencies:
       no-case: 3.0.4
       tslib: 2.3.1
-    dev: true
-
-  /patch-vue-directive-ssr/0.0.1:
-    resolution: {integrity: sha512-n84llktHah+EXUGo+RvmTJcAQJQVW0kHHHiJ34ZSLijzhHi32zCMjCc5VAFv4jmdC91bpaYGPk0cDW1D8hQ3GQ==}
-    requiresBuild: true
     dev: true
 
   /path-is-absolute/1.0.1:
@@ -3719,11 +3717,10 @@ packages:
         optional: true
     dev: true
 
-  /yak-barcode/1.0.5:
-    resolution: {integrity: sha512-IHCU04rw2X24epTfs4WZgIKOKA/62wGuqiqq2IN1IB+ld04ZtYryhQLwF2oUUWdkRUdp5SHdq9zkDXL8XTqTuA==}
-    peerDependencies:
-      jsbarcode: ^3.11.5
+  /yak-barcode/1.0.6:
+    resolution: {integrity: sha512-7r3YzgC49ySLagWeVgKbB5ctj4vpWR01fPv+AIAKdwGHBxGz8LuyuVhOpMJ4S2y83VqPl6xYpIFOMgoOiveFBQ==}
     dependencies:
+      jsbarcode: 3.11.5
       vue: 3.2.11
     dev: false
 
