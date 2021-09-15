@@ -52,4 +52,7 @@ module.exports = {
       },
     ],
   ],
+  bundlerConfig: {
+    evergreen: true,
+  },
 };

@@ -21,6 +21,7 @@
     "vuepress": "^2.0.0-beta.25"
   },
   "dependencies": {
-    "element-plus": "^1.0.2-beta.70"
+    "element-plus": "^1.0.2-beta.70",
+    "yak-barcode": "^1.0.3"
   }
 }

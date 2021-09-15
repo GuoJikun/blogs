@@ -27,6 +27,14 @@ module.exports = {
           text: "Scss之extend和mixin",
           link: "/basic/p2021091401.md",
         },
+        {
+          text: "Css 之 contain",
+          link: "/basic/contain.md",
+        },
+        {
+          text: "自定义滚动条样式",
+          link: "/basic/scrollbar.md",
+        },
       ],
     },
     {
@@ -181,6 +189,10 @@ module.exports = {
     {
       text: "linux 禁止指定软件升级",
       link: "/other/disabled-upgrade.md",
+    },
+    {
+      text: "Markdown 基础语法",
+      link: "/other/md.md",
     },
   ],
 };
