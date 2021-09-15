@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@vuepress/plugin-register-components': ^2.0.0-beta.26
   element-plus: ^1.0.2-beta.71
+  patch-vue-directive-ssr: ^0.0.1
   vuepress: ^2.0.0-beta.26
   yak-barcode: ^1.0.6
 
@@ -12,6 +13,7 @@ dependencies:
 
 devDependencies:
   '@vuepress/plugin-register-components': 2.0.0-beta.26
+  patch-vue-directive-ssr: 0.0.1
   vuepress: 2.0.0-beta.26
 
 packages:
@@ -2697,6 +2699,11 @@ packages:
     dependencies:
       no-case: 3.0.4
       tslib: 2.3.1
+    dev: true
+
+  /patch-vue-directive-ssr/0.0.1:
+    resolution: {integrity: sha512-n84llktHah+EXUGo+RvmTJcAQJQVW0kHHHiJ34ZSLijzhHi32zCMjCc5VAFv4jmdC91bpaYGPk0cDW1D8hQ3GQ==}
+    requiresBuild: true
     dev: true
 
   /path-is-absolute/1.0.1:
