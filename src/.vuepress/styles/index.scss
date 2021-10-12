@@ -1,14 +1,35 @@
+div,
+code {
+  box-sizing: border-box;
+}
+/*重置默认主题的字体大小*/
+.theme-default-content {
+  font-size: 15px;
+}
+/*reset sidebar style*/
 .sidebar-heading {
   font-weight: 500;
   font-size: 16px;
 }
-a.sidebar-item.sidebar-heading.active {
-  font-weight: 500;
-  border-left: none;
-  border-right: 0.2rem solid var(--c-text-accent);
+p.sidebar-item:not(.sidebar-heading) {
+  color: var(--c-bg-arrow);
 }
-a.sidebar-item.active {
-  font-weight: 500;
-  border-left: none;
-  border-right: 0.2rem solid var(--c-text-accent);
+.sidebar-item:not(.sidebar-heading) {
+  font-size: 15px;
+}
+
+/** flex
+***************************/
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.align-items-center {
+  align-items: center;
+  align-content: center;
+}
+.flex-justify-content-between {
+  justify-content: space-between;
 }

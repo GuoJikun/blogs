@@ -14,6 +14,10 @@ module.exports = [
     link: "/data-structure/list.md",
   },
   {
+    text: "小工具",
+    link: "/tools/readme.md",
+  },
+  {
     text: "其他",
     link: "/other/wsl.md",
   },

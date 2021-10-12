@@ -177,6 +177,12 @@ module.exports = {
       ],
     },
   ],
+  "/tools/": [
+    {
+      text: "阴影生成器",
+      link: "/tools/shadow.md",
+    },
+  ],
   "/other/": [
     {
       text: "win11安装wslg",
