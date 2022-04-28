@@ -36,13 +36,13 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       # Runs a single command using the runners shell
-      - name: 安装pnpm
-        run: npm i -g pnpm
+      - name: 安装yarn
+        run: npm i -g yarn
       - name: 安装依赖
-        run: pnpm i
+        run: yarn
 
       - name: 打包
-        run: pnpm run build
+        run: yarn run build
 
       # 配置git用户名和邮箱
       - name: 配置git
