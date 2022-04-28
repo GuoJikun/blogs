@@ -1,4 +1,8 @@
 module.exports = {
+  "/": {
+    text: "首页",
+    link: "/readme.md",
+  },
   "/basic/": [
     {
       text: "HTML & CSS",
@@ -73,6 +77,10 @@ module.exports = {
     {
       text: "ECMAScript 标准",
       children: [
+        {
+          text: "ECMA 2022",
+          link: "/basic/ecma/2022.md",
+        },
         {
           text: "ECMA 2021",
           link: "/basic/ecma/2021.md",

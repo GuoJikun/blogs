@@ -38,7 +38,6 @@ function addEvents(contentMenu, hoverStyle, fn) {
     if (nodeName === "li") {
       const brothers = findBrothersElement(target);
       brothers.map((ele) => {
-        console.log(ele, "ele");
         ele.style.backgroundColor = "#ffffff";
         ele.style.color = "#333";
       });

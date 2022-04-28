@@ -1,7 +1,7 @@
 <p>&nbsp;</p>
 
 ::: tip 提示
-本文的 md 语法是针对 express
+本文的 md 语法是针对 vuepress
 :::
 
 ## 标题

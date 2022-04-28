@@ -1,6 +1,7 @@
 const sidebar = require("./config/sidebar.js");
 const navbar = require("./config/nav.js");
 const { path } = require("@vuepress/utils");
+const { defaultTheme } = require("@vuepress/theme-default");
 
 module.exports = {
   lang: "zh-CN",
@@ -14,7 +15,7 @@ module.exports = {
       level: [2, 3],
     },
   },
-  themeConfig: {
+  theme: defaultTheme({
     home: "/readme.md",
     logo: "https://vuejs.org/images/logo.png",
     sidebarDepth: 3,
@@ -27,7 +28,7 @@ module.exports = {
     docsDir: "src",
     navbar: navbar,
     sidebar: sidebar,
-  },
+  }),
   dest: "docs",
 
   // 404 page

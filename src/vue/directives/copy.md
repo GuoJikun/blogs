@@ -4,7 +4,7 @@
 
 通过复制指令的 binding.value
 
-<el-button type="primary" size="medium" v-copy="`通过指令提供值`" @clipboard-copy="copySuccess">
+<el-button type="primary" v-copy="`通过指令提供值`" @clipboard-copy="copySuccess">
 通过指令提供值
 </el-button>
 
@@ -12,7 +12,7 @@
 
 复制元素的 textContent
 
-<el-button type="primary" size="medium" v-copy @clipboard-copy="copySuccess">
+<el-button type="primary" v-copy @clipboard-copy="copySuccess">
 通过 textContent 属性复制
 </el-button>
 
