@@ -21,7 +21,7 @@ img {
         </p>
         <img
             class="filter-item-img"
-            :src="$withBase('/images/basic/filter.jpg')"
+            :src="withBase('/images/basic/filter.jpg')"
             :style="{ filter: `blur(${value1}px)` }"
         />
         <el-slider v-model="value1" class="filter-item-slider" show-input></el-slider>
@@ -33,7 +33,7 @@ img {
         </p>
         <img
             class="filter-item-img"
-            :src="$withBase('/images/basic/filter.jpg')"
+            :src="withBase('/images/basic/filter.jpg')"
             :style="{ filter: `brightness(${value2}%)` }"
         />
         <el-slider v-model="value2" class="filter-item-slider" show-input :max="300"></el-slider>
@@ -45,7 +45,7 @@ img {
         </p>
         <img
             class="filter-item-img"
-            :src="$withBase('/images/basic/filter.jpg')"
+            :src="withBase('/images/basic/filter.jpg')"
             :style="{ filter: `contrast(${value3}%)` }"
         />
         <el-slider v-model="value3" class="filter-item-slider" show-input :max="300"></el-slider>
@@ -57,7 +57,7 @@ img {
         </p>
         <img
             class="filter-item-img"
-            :src="$withBase('/images/basic/filter.jpg')"
+            :src="withBase('/images/basic/filter.jpg')"
             :style="{ filter: `grayscale(${value4}%)` }"
         />
         <el-slider v-model="value4" class="filter-item-slider" show-input></el-slider>
@@ -69,7 +69,7 @@ img {
         </p>
         <img
             class="filter-item-img"
-            :src="$withBase('/images/basic/filter.jpg')"
+            :src="withBase('/images/basic/filter.jpg')"
             :style="{ filter: `hue-rotate(${value5}deg)` }"
         />
         <el-slider v-model="value5" class="filter-item-slider" show-input :max="720"></el-slider>
@@ -82,7 +82,7 @@ img {
         </p>
         <img
             class="filter-item-img"
-            :src="$withBase('/images/basic/filter.jpg')"
+            :src="withBase('/images/basic/filter.jpg')"
             :style="{ filter: `invert(${value6}%)` }"
         />
         <el-slider v-model="value6" class="filter-item-slider" show-input></el-slider>
@@ -95,7 +95,7 @@ img {
         </p>
         <img
             class="filter-item-img"
-            :src="$withBase('/images/basic/filter.jpg')"
+            :src="withBase('/images/basic/filter.jpg')"
             :style="{ filter: `opacity(${value7}%)` }"
         />
         <el-slider v-model="value7" class="filter-item-slider" show-input :max="100"></el-slider>
@@ -108,7 +108,7 @@ img {
         </p>
         <img
             class="filter-item-img"
-            :src="$withBase('/images/basic/filter.jpg')"
+            :src="withBase('/images/basic/filter.jpg')"
             :style="{ filter: `saturate(${value8}%)` }"
         />
         <el-slider v-model="value8" class="filter-item-slider" show-input :max="300"></el-slider>
@@ -120,7 +120,7 @@ img {
         </p>
         <img
             class="filter-item-img"
-            :src="$withBase('/images/basic/filter.jpg')"
+            :src="withBase('/images/basic/filter.jpg')"
             :style="{ filter: `sepia(${value9}%)` }"
         />
         <el-slider v-model="value9" class="filter-item-slider" show-input></el-slider>
@@ -129,6 +129,7 @@ img {
 
 <script>
 import {defineComponent, reactive, toRefs} from 'vue';
+import { withBase } from 'vitepress'
 export default defineComponent({
     setup() {
         const data = reactive({
@@ -143,7 +144,8 @@ export default defineComponent({
             value9: 0,
         })
         return {
-            ...toRefs(data)
+            ...toRefs(data),
+            withBase
         }
     }
 })

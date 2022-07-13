@@ -1,12 +1,8 @@
-module.exports = {
-  "/": {
-    text: "首页",
-    link: "/readme.md",
-  },
+export default {
   "/basic/": [
     {
       text: "HTML & CSS",
-      children: [
+      items: [
         {
           text: "Filter 滤镜",
           link: "/basic/filter.md",
@@ -43,7 +39,7 @@ module.exports = {
     },
     {
       text: "Javascript",
-      children: [
+      items: [
         {
           text: "Cookie 缓存",
           link: "/basic/js/cookie.md",
@@ -72,11 +68,12 @@ module.exports = {
           text: "手写new,bind,call,apply",
           link: "/basic/js/p2021091402.md",
         },
+        { text: "获取滚动条宽度", link: "/basic/scrollbar-width.md" },
       ],
     },
     {
       text: "ECMAScript 标准",
-      children: [
+      items: [
         {
           text: "ECMA 2022",
           link: "/basic/ecma/2022.md",
@@ -107,12 +104,11 @@ module.exports = {
         },
       ],
     },
-    { text: "获取滚动条宽度", link: "/basic/scrollbar-width.md" },
   ],
   "/vue/": [
     {
       text: "指令",
-      children: [
+      items: [
         {
           text: "Copy 复制",
           link: "/vue/directives/copy.md",
@@ -125,7 +121,7 @@ module.exports = {
     },
     {
       text: "组件",
-      children: [
+      items: [
         {
           text: "ContentMenu 右键菜单",
           link: "/vue/component/content-menu.md",
@@ -137,18 +133,23 @@ module.exports = {
       ],
     },
     {
-      text: "env 配置文件",
-      link: "/vue/env.md",
-    },
-    {
-      text: "vueCli项目添加vite支持",
-      link: "/vue/p202109101.md",
+      text: "其它",
+      items: [
+        {
+          text: "env 配置文件",
+          link: "/vue/env.md",
+        },
+        {
+          text: "vueCli项目添加vite支持",
+          link: "/vue/p202109101.md",
+        },
+      ],
     },
   ],
   "/data-structure/": [
     {
       text: "数据结构",
-      children: [
+      items: [
         {
           text: "List 列表",
           link: "/data-structure/list.md",
@@ -177,7 +178,7 @@ module.exports = {
     },
     {
       text: "算法",
-      children: [
+      items: [
         {
           text: "Sort 排序",
           link: "/data-structure/sort.md",
@@ -187,30 +188,40 @@ module.exports = {
   ],
   "/tools/": [
     {
-      text: "阴影生成器",
-      link: "/tools/shadow.md",
+      text: "工具",
+      items: [
+        {
+          text: "阴影生成器",
+          link: "/tools/shadow.md",
+        },
+      ],
     },
   ],
   "/other/": [
     {
-      text: "win11安装wslg",
-      link: "/other/wsl.md",
-    },
-    {
-      text: "win10 激活",
-      link: "/other/activation-win10.md",
-    },
-    {
-      text: "Scoop 包管理器",
-      link: "/other/scoop.md",
-    },
-    {
-      text: "linux 禁止指定软件升级",
-      link: "/other/disabled-upgrade.md",
-    },
-    {
-      text: "Markdown 基础语法",
-      link: "/other/md.md",
+      text: "其它",
+      items: [
+        {
+          text: "win11安装 wslg",
+          link: "/other/wsl.md",
+        },
+        {
+          text: "win10 激活",
+          link: "/other/activation-win10.md",
+        },
+        {
+          text: "Scoop 包管理器",
+          link: "/other/scoop.md",
+        },
+        {
+          text: "linux 禁止指定软件升级",
+          link: "/other/disabled-upgrade.md",
+        },
+        {
+          text: "Markdown 基础语法",
+          link: "/other/md.md",
+        },
+      ],
     },
   ],
 };

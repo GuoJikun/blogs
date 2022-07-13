@@ -1,22 +1,15 @@
-const sidebar = require("./config/sidebar.js");
-const navbar = require("./config/nav.js");
-const { path } = require("@vuepress/utils");
-const { defaultTheme } = require("@vuepress/theme-default");
+import { defineConfig } from "vitepress";
+import sidebar from "./config/sidebar.js";
+import navbar from "./config/nav.js";
 
-module.exports = {
+export default defineConfig({
   lang: "zh-CN",
   title: "前端小栈",
   description: "这是我的第一个 VuePress 站点",
-  markdown: {
-    anchor: {
-      level: [2, 3],
-    },
-    extractHeaders: {
-      level: [2, 3],
-    },
-  },
-  theme: defaultTheme({
-    home: "/readme.md",
+
+  themeConfig: {
+    layout: "page",
+    home: "/index.md",
     logo: "https://vuejs.org/images/logo.png",
     sidebarDepth: 3,
     repo: "GuoJikun/blog-vuepress",
@@ -26,10 +19,16 @@ module.exports = {
     contributorsText: "贡献者",
     editLinkText: "在 Github 上编辑",
     docsDir: "src",
-    navbar: navbar,
+    nav: navbar,
+    socialLinks: [
+      { icon: "github", link: "https://github.com/GuoJikun/blog-vuepress" },
+    ],
     sidebar: sidebar,
-  }),
-  dest: "docs",
+    footer: {
+      message: "MIT Licensed",
+      copyright: "Copyright © 2022-present GuoJiKun",
+    },
+  },
 
   // 404 page
   notFound: [
@@ -44,13 +43,4 @@ module.exports = {
   openInNewWindow: "在新窗口打开",
   toggleDarkMode: "切换夜间模式",
   toggleSidebar: "切换侧边栏",
-
-  plugins: [
-    [
-      "@vuepress/register-components",
-      {
-        componentsDir: path.resolve(__dirname, "./components"),
-      },
-    ],
-  ],
-};
+});
