@@ -3,7 +3,7 @@
     <slot></slot>
     <transition>
       <div
-        v-show="visiable"
+        v-show="visible"
         class="ivy-content-menu-wrap"
         :class="menuWrapClass"
         :style="{ left: menuPosition.left, top: menuPosition.top }"
@@ -32,7 +32,6 @@ import {
   onBeforeUnmount,
   defineComponent,
 } from "vue";
-
 export default defineComponent({
   name: "ContextMenu",
   props: {
@@ -48,7 +47,7 @@ export default defineComponent({
   emits: ["menu-click"],
   setup(props, { emit }) {
     const wrapEl = ref(null);
-    const visiable = ref(false);
+    const visible = ref(false);
 
     const menuPosition = reactive({
       left: 0,
@@ -62,11 +61,11 @@ export default defineComponent({
       const y = ev.y - rootPosition.top;
       menuPosition.top = `${y}px`;
       menuPosition.left = `${x}px`;
-      visiable.value = true;
+      visible.value = true;
     };
 
     const hideContentFn = () => {
-      visiable.value = false;
+      visible.value = false;
     };
 
     const menuClick = (item) => {
@@ -85,7 +84,7 @@ export default defineComponent({
 
     return {
       wrapEl,
-      visiable,
+      visible,
       menuPosition,
       menuClick,
     };
@@ -101,7 +100,7 @@ export default defineComponent({
     box-sizing: border-box;
     background-color: #fff;
     position: absolute;
-    box-shadow: 0 1px 6px rgb(0 0 0 / 20%);
+    box-shadow: 0 1px 6px rgba(0 0 0, 0.2);
     border-color: 1px solid #eee;
     border-radius: 4px;
     padding: 5px 0;

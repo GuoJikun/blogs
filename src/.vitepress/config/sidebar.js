@@ -221,6 +221,10 @@ export default {
           text: "Markdown 基础语法",
           link: "/other/md.md",
         },
+        {
+          text: "Windows终端代理",
+          link: "/other/terminal-proxy.md",
+        },
       ],
     },
   ],

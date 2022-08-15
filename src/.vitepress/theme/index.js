@@ -1,19 +1,23 @@
 import DefaultTheme from "vitepress/theme";
 import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
-import zhCn from "element-plus/es/locale/lang/zh-cn";
+// import zhCn from "element-plus/lib/locale/zh-cn.js";
 
 import Copy from "../directives/copy.js";
-import ContentMenus from "../directives/mouse-right-click.js";
-import Barcode from "yak-barcode";
+import "@jkun/contextmenu/dist/style.css";
 
 export default {
   ...DefaultTheme,
-  enhanceApp({ app }) {
-    app.use(ElementPlus, { locale: zhCn });
+  async enhanceApp({ app }) {
+    app.use(ElementPlus);
+    // app.use(ElementPlus, { locale: zhCn });
 
-    app.use(Barcode);
     app.use(Copy);
-    app.use(ContentMenus);
+    if (!import.meta.SSR) {
+      const ContentMenus = await import("@jkun/contextmenu");
+      app.use(ContentMenus.default, { type: "both" });
+      const Barcode = await import("yak-barcode");
+      app.use(Barcode.default);
+    }
   },
 };

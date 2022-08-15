@@ -4,7 +4,7 @@
 
 通过 menus 自定义菜单，通过 callback 来设置点击每个菜单执行的任务
 
-<div v-contentMenus="contentMenuList" style="line-height: 34px">
+<div v-contextmenu="contentMenuList" style="line-height: 34px">
     <div>在此区域内可以显示自定义菜单</div>
     <div>在此区域内可以显示自定义菜单</div>
     <div>在此区域内可以显示自定义菜单</div>
@@ -17,7 +17,7 @@
 </div>
 
 ```vue
-<div v-contentMenus="contentMenuList" style="line-height: 34px">
+<div v-contextmenu="{ options: contentMenuList.menus, onMenuClick: contentMenuList.callback }" style="line-height: 34px">
     <div>在此区域内可以显示自定义菜单</div>
     <div>在此区域内可以显示自定义菜单</div>
     <div>在此区域内可以显示自定义菜单</div>
@@ -27,80 +27,65 @@
     <div>在此区域内可以显示自定义菜单</div>
     <div>在此区域内可以显示自定义菜单</div>
     <div>在此区域内可以显示自定义菜单</div>
-</div>
-```
-
-## 自定义菜单的样式
-
-可以使绑定指令的元素在页面加载后自动获得焦点
-
-<div v-contentMenus="contentMenuListCustom" style="line-height: 34px">
-    <div>菜单撒付付付付付</div>
-    <div>菜单撒付付付付付</div>
-    <div>菜单撒付付付付付</div>
-    <div>菜单撒付付付付付</div>
-    <div>菜单撒付付付付付</div>
-    <div>菜单撒付付付付付</div>
-    <div>菜单撒付付付付付</div>
-    <div>菜单撒付付付付付</div>
-    <div>菜单撒付付付付付</div>
-</div>
-
-```vue
-<div v-contentMenus="contentMenuListCustom" style="line-height: 34px">
-    <div>菜单撒付付付付付</div>
-    <div>菜单撒付付付付付</div>
-    <div>菜单撒付付付付付</div>
-    <div>菜单撒付付付付付</div>
-    <div>菜单撒付付付付付</div>
-    <div>菜单撒付付付付付</div>
-    <div>菜单撒付付付付付</div>
-    <div>菜单撒付付付付付</div>
-    <div>菜单撒付付付付付</div>
 </div>
 ```
 
 <script>
-import {reactive, toRefs, defineComponent} from 'vue';
-
-export default defineComponent({
+import { reactive, toRefs } from 'vue';
+export default {
     setup() {
         const data = reactive({
             contentMenuList: {
-                menus: [
+                options: [
                     {
                         command: 'delete',
-                        name: '删除',
+                        text: '删除',
                     },
                     {
                         command: 'person',
-                        name: '个人中心个人中心个人中心',
+                        text: '个人中心',
                     },
                     {
                         command: 'logout',
-                        name: '退出',
+                        text: '退出',
+                    },
+                    {
+                        divider: true,
+                    },
+                    {
+                        command: 'copy',
+                        text: '复制',
+                    },
+                    {
+                        command: 'cut',
+                        text: '剪切',
+                    },
+                    {
+                        command: 'paste',
+                        text: '粘贴',
                     },
                 ],
-                callback(item) {
-                    console.warn(item, '鼠标右键菜单点击事件')
+                onMenuClick(item) {
+                    alert(JSON.stringify(item, null, 2), '鼠标右键菜单点击事件')
                 },
+                width: "300px"
             },
             contentMenuListCustom: {
                 menus: [
                     {
                         command: 'delete',
-                        name: '删除',
+                        text: '删除',
                     },
                     {
                         command: 'person',
-                        name: '个人中心个人中心个人中心',
+                        text: '个人中心个人中心个人中心',
                     },
                     {
                         command: 'logout',
-                        name: '退出',
+                        text: '退出',
                     },
                 ],
-                callback(item) {
+                onMenuClick(item) {
                     console.warn(item, '鼠标右键菜单点击事件')
                 },
                 hoverStyle: {
@@ -113,5 +98,5 @@ export default defineComponent({
             ...toRefs(data)
         }
     },
-})
+}
 </script>
