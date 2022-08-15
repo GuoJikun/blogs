@@ -6,12 +6,16 @@ export default defineConfig({
   lang: "zh-CN",
   title: "前端小栈",
   description: "这是我的第一个 VuePress 站点",
-
+  lastUpdated: true,
   themeConfig: {
     home: "/index.md",
     logo: "https://vuejs.org/images/logo.png",
-    repo: "GuoJikun/blog-vuepress",
     lastUpdatedText: "最后更新时间",
+    editLink: {
+      pattern: "https://github.com/vuejs/guojikun/edit/main/src/:path",
+      text: "在 GitHub 上编辑此页",
+    },
+    outlineTitle: "目录",
     nav: navbar,
     socialLinks: [
       { icon: "github", link: "https://github.com/GuoJikun/blog-vuepress" },
@@ -20,6 +24,10 @@ export default defineConfig({
     footer: {
       message: "MIT Licensed",
       copyright: "Copyright © 2022-present GuoJiKun",
+    },
+    docFooter: {
+      prev: "上一页",
+      next: "下一页",
     },
   },
   vite: {

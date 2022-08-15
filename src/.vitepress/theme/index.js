@@ -10,7 +10,6 @@ export default {
   ...DefaultTheme,
   async enhanceApp({ app }) {
     app.use(ElementPlus);
-    // app.use(ElementPlus, { locale: zhCn });
 
     app.use(Copy);
     if (!import.meta.SSR) {

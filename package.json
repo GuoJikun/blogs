@@ -18,7 +18,7 @@
     "vue": "^3.2.37"
   },
   "dependencies": {
-    "@jkun/contextmenu": "^1.0.0",
+    "@jkun/contextmenu": "^1.0.1",
     "element-plus": "^2.1.11",
     "fox-preview-image": "^2.5.0",
     "yak-barcode": "^1.0.6"

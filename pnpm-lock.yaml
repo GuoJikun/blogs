@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@jkun/contextmenu': ^1.0.0
+  '@jkun/contextmenu': ^1.0.1
   element-plus: ^2.1.11
   fox-preview-image: ^2.5.0
   sass: ^1.53.0
@@ -10,7 +10,7 @@ specifiers:
   yak-barcode: ^1.0.6
 
 dependencies:
-  '@jkun/contextmenu': 1.0.0_vue@3.2.37
+  '@jkun/contextmenu': 1.0.1_vue@3.2.37
   element-plus: 2.2.13_vue@3.2.37
   fox-preview-image: 2.5.0_vue@3.2.37
   yak-barcode: 1.0.6
@@ -218,8 +218,8 @@ packages:
       '@floating-ui/core': 0.7.3
     dev: false
 
-  /@jkun/contextmenu/1.0.0_vue@3.2.37:
-    resolution: {integrity: sha512-KfxsI3jepa0A6EAqiW+A0cj4ABSRoUDcy0k6eTr4nXXVeiRj2JQL9Rzt83Pk7uekKuQG9By3mdJqWwaJKF7eFw==}
+  /@jkun/contextmenu/1.0.1_vue@3.2.37:
+    resolution: {integrity: sha512-zBBcovyuPZLnYu2+RoQ95tgLBGn46ztj0CWHpxAB4qXga6JogxPK53DPtg6jPoY6zI1b56ZQ+MwccbhvIEi3ig==}
     peerDependencies:
       vue: ^3.2.37
     dependencies:
