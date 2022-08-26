@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@jkun/contextmenu": "^1.0.1",
-    "element-plus": "^2.1.11",
+    "element-plus": "^2.2.14",
     "fox-preview-image": "^2.5.0",
     "yak-barcode": "^1.1.1"
   }

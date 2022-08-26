@@ -31,11 +31,4 @@ export default defineConfig({
       next: "下一页",
     },
   },
-  vite: {
-    build: {
-      rollupOptions: {
-        external: ["element-plus"],
-      },
-    },
-  },
 });
