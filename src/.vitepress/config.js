@@ -13,7 +13,7 @@ export default defineConfig({
     logo: "https://vuejs.org/images/logo.png",
     lastUpdatedText: "最后更新时间",
     editLink: {
-      pattern: "https://github.com/vuejs/guojikun/edit/main/src/:path",
+      pattern: "https://github.com/GuoJikun/edit/main/src/:path",
       text: "在 GitHub 上编辑此页",
     },
     outlineTitle: "目录",
