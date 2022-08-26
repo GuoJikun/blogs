@@ -1,3 +1,9 @@
+---
+layout: page
+---
+
+
+
 当前href: {{href}}
 
 <script setup>
@@ -10,7 +16,7 @@ const getParamMap = href => {
 const href = ref('');
 onMounted(()=>{
     href.value = location.href;
-    const tmp = getParamMap(location.search);
-    console.log(href.value, tmp.get("code"))
+    const tmp = getParamMap(location.hash?.replace('#','?'));
+    console.log(location.hash, tmp.get("code"))
 })
 </script>
