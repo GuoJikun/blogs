@@ -7,7 +7,7 @@ export default defineConfig({
   title: "前端小栈",
   description: "这是我的第一个 VuePress 站点",
   lastUpdated: true,
-  outDir: "./docs",
+  outDir: "../docs",
   themeConfig: {
     home: "/index.md",
     logo: "https://vuejs.org/images/logo.png",
