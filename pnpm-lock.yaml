@@ -7,13 +7,13 @@ specifiers:
   sass: ^1.53.0
   vitepress: 1.0.0-alpha.10
   vue: ^3.2.37
-  yak-barcode: ^1.0.6
+  yak-barcode: ^1.1.1
 
 dependencies:
   '@jkun/contextmenu': 1.0.1_vue@3.2.37
   element-plus: 2.2.13_vue@3.2.37
   fox-preview-image: 2.5.0_vue@3.2.37
-  yak-barcode: 1.0.6
+  yak-barcode: 1.1.1
 
 devDependencies:
   sass: 1.54.4
@@ -790,11 +790,6 @@ packages:
     engines: {node: '>=0.12.0'}
     dev: true
 
-  /jsbarcode/3.11.5:
-    resolution: {integrity: sha512-zv3KsH51zD00I/LrFzFSM6dst7rDn0vIMzaiZFL7qusTjPZiPtxg3zxetp0RR7obmjTw4f6NyGgbdkBCgZUIrA==}
-    hasBin: true
-    dev: false
-
   /jsonc-parser/3.1.0:
     resolution: {integrity: sha512-DRf0QjnNeCUds3xTjKlQQ3DpJD51GvDjJfnxUVWg6PZTo2otSm+slzNAxU/35hF8/oJIKoG9slq30JYOsF2azg==}
     dev: true
@@ -1028,9 +1023,10 @@ packages:
       '@vue/server-renderer': 3.2.37_vue@3.2.37
       '@vue/shared': 3.2.37
 
-  /yak-barcode/1.0.6:
-    resolution: {integrity: sha512-7r3YzgC49ySLagWeVgKbB5ctj4vpWR01fPv+AIAKdwGHBxGz8LuyuVhOpMJ4S2y83VqPl6xYpIFOMgoOiveFBQ==}
+  /yak-barcode/1.1.1:
+    resolution: {integrity: sha512-xiB6WgL7QSpmBrGekY0OZlewRHdCRQu/PM0AAxtzntctF0i3uD/prF49XasbvLBqTs07hWcw0EUE6kqPa5FnuA==}
+    peerDependencies:
+      jsbarcode: ^3.11.5
     dependencies:
-      jsbarcode: 3.11.5
       vue: 3.2.37
     dev: false
