@@ -18,5 +18,11 @@ onMounted(()=>{
     href.value = location.href;
     const tmp = getParamMap(location.hash?.replace('#','?'));
     console.log(location.hash, tmp.get("code"))
+    const platform = tmp.get('state');
+    if(platform === 'tauri'){
+        console.log('执行了')
+        const instance = new BroadcastChannel('cn-login');
+        instance.postMessage('hello tauri!')
+    }
 })
 </script>
