@@ -18,11 +18,12 @@ onMounted(()=>{
     href.value = location.href;
     const tmp = getParamMap(location.hash?.replace('#','?'));
     const platform = tmp.get('state');
+    const code = tmp.get('code');
 
     if(platform.startsWith('tauri')){
-        const tmpArr = platform.split('+');
+        const tmpArr = decodeURIComponent(platform).split('+');
         const env = tmpArr[1] || 'prod'
-        const href = env === 'prod' ? 'https://tauri.localhost' : 'http://localhost:9001'
+        const href = env === 'prod' ? `https://tauri.localhost/auth?code=${code}` : `http://localhost:9001/auth?code=${code}`
         const a = document.createElement('a');
         a.href = href;
         a.click();
