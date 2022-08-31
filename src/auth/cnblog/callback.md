@@ -19,10 +19,14 @@ onMounted(()=>{
     const tmp = getParamMap(location.hash?.replace('#','?'));
     console.log(location.hash, tmp.get("code"))
     const platform = tmp.get('state');
-    if(platform === 'tauri'){
-        console.log('执行了')
-        const instance = new BroadcastChannel('cn-login');
-        instance.postMessage('hello tauri!')
+
+    if(platform==='tauri'){
+        const a = document.createElement('a');
+        a.href = '/';
+        a.click();
+        console.log('a 被点击了')
+    }else{
+        console.log('其他来源')
     }
 })
 </script>
