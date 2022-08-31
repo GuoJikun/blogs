@@ -20,9 +20,12 @@ onMounted(()=>{
     console.log(location.hash, tmp.get("code"))
     const platform = tmp.get('state');
 
-    if(platform==='tauri'){
+    if(platform.startsWidth('tauri+')){
+        const tmpArr = platform.split('+');
+        const env = tmpArr[1] || 'prod'
+        const href = env === 'prod' ? 'https://tauri.localhost' : 'http://localhost:9001'
         const a = document.createElement('a');
-        a.href = '/';
+        a.href = href;
         a.click();
         console.log('a 被点击了')
     }else{
