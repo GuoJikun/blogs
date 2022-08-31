@@ -30,7 +30,10 @@ onMounted(()=>{
         const href = env === 'prod' ? `https://tauri.localhost/auth?code=${code}` : `http://localhost:9001/auth?code=${code}`
         const a = document.createElement('a');
         a.href = href;
-        // a.click();
+        setTimeout(() => {
+            a.click();
+        }, 10);
+        
         console.log('a 被点击了')
     }else{
         console.log('其他来源')
