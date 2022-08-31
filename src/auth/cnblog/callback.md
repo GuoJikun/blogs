@@ -23,7 +23,7 @@ onMounted(()=>{
     if(platform.startsWith('tauri')){
         console.log(platform)
         console.log(code)
-        const tmpArr = decodeURIComponent(platform).split('+');
+        const tmpArr = decodeURIComponent(platform).split('_');
         console.log(tmpArr)
         const env = tmpArr[1] || 'prod'
         console.log(env)
