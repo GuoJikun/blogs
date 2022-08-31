@@ -17,10 +17,9 @@ const href = ref('');
 onMounted(()=>{
     href.value = location.href;
     const tmp = getParamMap(location.hash?.replace('#','?'));
-    console.log(location.hash, tmp.get("code"))
     const platform = tmp.get('state');
 
-    if(platform.startsWidth('tauri+')){
+    if(platform.startsWith('tauri+')){
         const tmpArr = platform.split('+');
         const env = tmpArr[1] || 'prod'
         const href = env === 'prod' ? 'https://tauri.localhost' : 'http://localhost:9001'
