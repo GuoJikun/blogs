@@ -2,6 +2,7 @@ export default {
   "/basic/": [
     {
       text: "HTML & CSS",
+      collapsible: true,
       items: [
         {
           text: "Filter 滤镜",
@@ -39,6 +40,7 @@ export default {
     },
     {
       text: "Javascript",
+      collapsible: true,
       items: [
         {
           text: "Cookie 缓存",
@@ -73,6 +75,7 @@ export default {
     },
     {
       text: "ECMAScript 标准",
+      collapsible: true,
       items: [
         {
           text: "ECMA 2022",
@@ -149,6 +152,7 @@ export default {
   "/data-structure/": [
     {
       text: "数据结构",
+      collapsible: true,
       items: [
         {
           text: "List 列表",
@@ -204,6 +208,10 @@ export default {
         {
           text: "win11安装 wslg",
           link: "/other/wsl.md",
+        },
+        {
+          text: "搭建私有Npm仓库",
+          link: "/other/private-npm-repository.md",
         },
         {
           text: "win10 激活",
