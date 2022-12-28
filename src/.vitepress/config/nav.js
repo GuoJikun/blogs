@@ -14,6 +14,10 @@ export default [
     link: "/data-structure/list.md",
   },
   {
+    text: "组件文档",
+    link: "/docs/readme.md",
+  },
+  {
     text: "小工具",
     link: "/tools/readme.md",
   },

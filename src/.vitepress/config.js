@@ -16,6 +16,7 @@ export default defineConfig({
       pattern: "https://github.com/GuoJikun/blog-vuepress/edit/main/src/:path",
       text: "在 GitHub 上编辑此页",
     },
+    outline: [2, 3],
     outlineTitle: "目录",
     nav: navbar,
     socialLinks: [

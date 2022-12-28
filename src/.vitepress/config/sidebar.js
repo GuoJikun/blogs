@@ -109,32 +109,32 @@ export default {
     },
   ],
   "/vue/": [
-    {
-      text: "指令",
-      items: [
-        {
-          text: "Copy 复制",
-          link: "/vue/directives/copy.md",
-        },
-        {
-          text: "ContentMenus 右键菜单",
-          link: "/vue/directives/content-menus.md",
-        },
-      ],
-    },
-    {
-      text: "组件",
-      items: [
-        {
-          text: "ContentMenu 右键菜单",
-          link: "/vue/component/content-menu.md",
-        },
-        {
-          text: "Barcode 条形码",
-          link: "/vue/component/barcode.md",
-        },
-      ],
-    },
+    // {
+    //   text: "指令",
+    //   items: [
+    //     {
+    //       text: "Copy 复制",
+    //       link: "/vue/directives/copy.md",
+    //     },
+    //     {
+    //       text: "ContentMenus 右键菜单",
+    //       link: "/vue/directives/content-menus.md",
+    //     },
+    //   ],
+    // },
+    // {
+    //   text: "组件",
+    //   items: [
+    //     {
+    //       text: "ContentMenu 右键菜单",
+    //       link: "/vue/component/content-menu.md",
+    //     },
+    //     {
+    //       text: "Barcode 条形码",
+    //       link: "/vue/component/barcode.md",
+    //     },
+    //   ],
+    // },
     {
       text: "其它",
       items: [
@@ -197,6 +197,17 @@ export default {
         {
           text: "阴影生成器",
           link: "/tools/shadow.md",
+        },
+      ],
+    },
+  ],
+  "/docs/": [
+    {
+      text: "组件文档",
+      items: [
+        {
+          text: "watermark 水印",
+          link: "/docs/watermark-vue.md",
         },
       ],
     },
