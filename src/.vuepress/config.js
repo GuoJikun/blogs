@@ -7,7 +7,7 @@ export default {
   lang: "zh-CN",
   title: "前端小栈",
   description: "这是我的第一个 VuePress 站点",
-  dest: "../docs",
+  dest: "dist",
   theme: defaultTheme({
     home: "/index.md",
     logo: "https://vuejs.org/images/logo.png",
