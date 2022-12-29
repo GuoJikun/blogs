@@ -13,7 +13,7 @@ export default defineClientConfig({
     app.use(ElementPlus, { locale: zhCn });
     app.use(watermark);
     app.use(barCode);
-    app.use(contextmenu);
+    app.use(contextmenu, { type: "both" });
     app.use(Copy);
   },
 });
