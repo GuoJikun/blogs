@@ -16,6 +16,12 @@ export default [
   {
     text: "组件文档",
     link: "/docs/readme.md",
+    children: [
+      {
+        text: "watermark 水印",
+        link: "/docs/watermark-vue.md",
+      },
+    ],
   },
   {
     text: "小工具",

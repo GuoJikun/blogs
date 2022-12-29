@@ -3,7 +3,7 @@ export default {
     {
       text: "HTML & CSS",
       collapsible: true,
-      items: [
+      children: [
         {
           text: "Filter 滤镜",
           link: "/basic/filter.md",
@@ -41,7 +41,7 @@ export default {
     {
       text: "Javascript",
       collapsible: true,
-      items: [
+      children: [
         {
           text: "Cookie 缓存",
           link: "/basic/js/cookie.md",
@@ -76,7 +76,7 @@ export default {
     {
       text: "ECMAScript 标准",
       collapsible: true,
-      items: [
+      children: [
         {
           text: "ECMA 2022",
           link: "/basic/ecma/2022.md",
@@ -109,35 +109,31 @@ export default {
     },
   ],
   "/vue/": [
-    // {
-    //   text: "指令",
-    //   items: [
-    //     {
-    //       text: "Copy 复制",
-    //       link: "/vue/directives/copy.md",
-    //     },
-    //     {
-    //       text: "ContentMenus 右键菜单",
-    //       link: "/vue/directives/content-menus.md",
-    //     },
-    //   ],
-    // },
-    // {
-    //   text: "组件",
-    //   items: [
-    //     {
-    //       text: "ContentMenu 右键菜单",
-    //       link: "/vue/component/content-menu.md",
-    //     },
-    //     {
-    //       text: "Barcode 条形码",
-    //       link: "/vue/component/barcode.md",
-    //     },
-    //   ],
-    // },
+    {
+      text: "指令",
+      children: [
+        {
+          text: "Copy 复制",
+          link: "/vue/directives/copy.md",
+        },
+      ],
+    },
+    {
+      text: "组件",
+      children: [
+        {
+          text: "ContentMenu 右键菜单",
+          link: "/vue/component/content-menu.md",
+        },
+        {
+          text: "Barcode 条形码",
+          link: "/vue/component/barcode.md",
+        },
+      ],
+    },
     {
       text: "其它",
-      items: [
+      children: [
         {
           text: "env 配置文件",
           link: "/vue/env.md",
@@ -153,7 +149,7 @@ export default {
     {
       text: "数据结构",
       collapsible: true,
-      items: [
+      children: [
         {
           text: "List 列表",
           link: "/data-structure/list.md",
@@ -182,7 +178,7 @@ export default {
     },
     {
       text: "算法",
-      items: [
+      children: [
         {
           text: "Sort 排序",
           link: "/data-structure/sort.md",
@@ -193,7 +189,7 @@ export default {
   "/tools/": [
     {
       text: "工具",
-      items: [
+      children: [
         {
           text: "阴影生成器",
           link: "/tools/shadow.md",
@@ -204,7 +200,7 @@ export default {
   "/docs/": [
     {
       text: "组件文档",
-      items: [
+      children: [
         {
           text: "watermark 水印",
           link: "/docs/watermark-vue.md",
@@ -215,7 +211,7 @@ export default {
   "/other/": [
     {
       text: "其它",
-      items: [
+      children: [
         {
           text: "win11安装 wslg",
           link: "/other/wsl.md",
