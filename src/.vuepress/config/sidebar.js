@@ -240,6 +240,10 @@ export default {
           text: "Windows终端代理",
           link: "/other/terminal-proxy.md",
         },
+        {
+          text: "更改wsl的安装位置",
+          link: "/other/move-wsl-install-dir.md",
+        },
       ],
     },
   ],
