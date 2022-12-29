@@ -15,7 +15,7 @@ export default {
     docsRepo: "https://github.com/GuoJikun/blog-vuepress",
     docsBranch: "main",
     docsDir: "src",
-    editLinkPattern: ":repo/-/edit/:branch/:path",
+    editLinkPattern: ":repo/edit/:branch/:path",
     editLink: true,
     editLinkText: "在 GitHub 上编辑此页",
     lastUpdated: true,
