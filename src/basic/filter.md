@@ -129,7 +129,7 @@ img {
 
 <script>
 import {defineComponent, reactive, toRefs} from 'vue';
-import { withBase } from '@vuepress/client'
+import { withBase } from 'vitepress'
 export default defineComponent({
     setup() {
         const data = reactive({

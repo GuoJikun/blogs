@@ -1,3 +1,5 @@
+# IntersectionObserver Api
+
 判断目标元素是否进入视线--利用 intersectionObserver api
 
 <div class="box" ref="boxEle">
@@ -46,7 +48,7 @@ export default defineComponent({
     const scrollTest = function () {
       const options = {
         root: boxEle.value,
-        rootMargin: "100px",
+        rootMargin: "10px",
         threshold: 1,
       };
       const observer = new IntersectionObserver(handler, options);
@@ -68,6 +70,7 @@ export default defineComponent({
 
 <script>
 import {defineComponent, ref, onMounted} from 'vue';
+
 export default defineComponent({
     setup(){
         const boxEle = ref(null);
@@ -77,7 +80,6 @@ export default defineComponent({
         const handler = function (entries, observer) {
             entries.forEach(function (entry) {
                 if(entry.isIntersecting){
-                    console.log(1)
                     text.value = '是'
                 }else{
                     text.value = '否'
@@ -96,8 +98,8 @@ export default defineComponent({
         const scrollTest = function (){
             const options = {
                 root: boxEle.value,
-                rootMargin: '100px',
-                threshold: 1,
+                rootMargin: '10px',
+                threshold: 0,
             }
             const observer = new IntersectionObserver(handler, options)
             observer.observe(targetEle.value);

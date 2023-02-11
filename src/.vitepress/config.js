@@ -1,14 +1,15 @@
-import { defaultTheme } from "@vuepress/theme-default";
+import { defineConfig } from "vitepress";
 import sidebar from "./config/sidebar.js";
 import navbar from "./config/nav.js";
 
-export default {
+export default defineConfig({
   base: "/",
   lang: "zh-CN",
   title: "前端小栈",
   description: "这是我的第一个 VuePress 站点",
-  dest: "dist",
-  theme: defaultTheme({
+  dest: "../dist",
+  lastUpdated: true,
+  themeConfig: {
     home: "/index.md",
     logo: "https://vuejs.org/images/logo.png",
     repo: "GuoJikun/blog-vuepress",
@@ -22,7 +23,7 @@ export default {
     lastUpdatedText: "最后更新时间",
     outline: [2, 3],
     outlineTitle: "目录",
-    navbar: navbar,
+    nav: navbar,
     socialLinks: [
       { icon: "github", link: "https://github.com/GuoJikun/blog-vuepress" },
     ],
@@ -35,5 +36,5 @@ export default {
       prev: "上一页",
       next: "下一页",
     },
-  }),
-};
+  },
+});

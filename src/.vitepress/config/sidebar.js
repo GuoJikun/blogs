@@ -3,7 +3,7 @@ export default {
     {
       text: "HTML & CSS",
       collapsible: true,
-      children: [
+      items: [
         {
           text: "Filter 滤镜",
           link: "/basic/filter.md",
@@ -41,7 +41,7 @@ export default {
     {
       text: "Javascript",
       collapsible: true,
-      children: [
+      items: [
         {
           text: "Cookie 缓存",
           link: "/basic/js/cookie.md",
@@ -76,7 +76,7 @@ export default {
     {
       text: "ECMAScript 标准",
       collapsible: true,
-      children: [
+      items: [
         {
           text: "ECMA 2022",
           link: "/basic/ecma/2022.md",
@@ -111,7 +111,7 @@ export default {
   "/vue/": [
     {
       text: "指令",
-      children: [
+      items: [
         {
           text: "Copy 复制",
           link: "/vue/directives/copy.md",
@@ -120,7 +120,7 @@ export default {
     },
     {
       text: "组件",
-      children: [
+      items: [
         {
           text: "ContentMenu 右键菜单",
           link: "/vue/component/content-menu.md",
@@ -133,7 +133,7 @@ export default {
     },
     {
       text: "其它",
-      children: [
+      items: [
         {
           text: "env 配置文件",
           link: "/vue/env.md",
@@ -149,7 +149,7 @@ export default {
     {
       text: "数据结构",
       collapsible: true,
-      children: [
+      items: [
         {
           text: "List 列表",
           link: "/data-structure/list.md",
@@ -178,7 +178,7 @@ export default {
     },
     {
       text: "算法",
-      children: [
+      items: [
         {
           text: "Sort 排序",
           link: "/data-structure/sort.md",
@@ -189,7 +189,7 @@ export default {
   "/tools/": [
     {
       text: "工具",
-      children: [
+      items: [
         {
           text: "阴影生成器",
           link: "/tools/shadow.md",
@@ -204,7 +204,7 @@ export default {
   "/docs/": [
     {
       text: "组件文档",
-      children: [
+      items: [
         {
           text: "watermark 水印",
           link: "/docs/watermark-vue.md",
@@ -215,7 +215,7 @@ export default {
   "/other/": [
     {
       text: "其它",
-      children: [
+      items: [
         {
           text: "win11安装 wslg",
           link: "/other/wsl.md",
