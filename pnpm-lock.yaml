@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@element-plus/icons-vue': ^2.0.10
   '@jkun/contextmenu': ^1.0.1
   '@jkun/watermark-vue': ^1.2.0
   '@vuepress/client': 2.0.0-beta.60
@@ -12,6 +13,7 @@ specifiers:
   yak-barcode: ^1.1.1
 
 dependencies:
+  '@element-plus/icons-vue': 2.0.10_vue@3.2.45
   '@jkun/contextmenu': 1.0.1_vue@3.2.45
   '@jkun/watermark-vue': registry.npmjs.org/@jkun/watermark-vue/1.2.0
   element-plus: 2.2.14_vue@3.2.45
@@ -54,8 +56,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /@element-plus/icons-vue/2.0.9_vue@3.2.45:
-    resolution: {integrity: sha512-okdrwiVeKBmW41Hkl0eMrXDjzJwhQMuKiBOu17rOszqM+LS/yBYpNQNV5Jvoh06Wc+89fMmb/uhzf8NZuDuUaQ==}
+  /@element-plus/icons-vue/2.0.10_vue@3.2.45:
+    resolution: {integrity: sha512-ygEZ1mwPjcPo/OulhzLE7mtDrQBWI8vZzEWSNB2W/RNCRjoQGwbaK4N8lV4rid7Ts4qvySU3njMN7YCiSlSaTQ==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
@@ -1013,7 +1015,7 @@ packages:
       vue: ^3.2.0
     dependencies:
       '@ctrl/tinycolor': 3.4.1
-      '@element-plus/icons-vue': 2.0.9_vue@3.2.45
+      '@element-plus/icons-vue': 2.0.10_vue@3.2.45
       '@floating-ui/dom': 0.5.4
       '@popperjs/core': /@sxzz/popperjs-es/2.11.7
       '@types/lodash': 4.14.182

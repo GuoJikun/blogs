@@ -194,6 +194,10 @@ export default {
           text: "阴影生成器",
           link: "/tools/shadow.md",
         },
+        {
+          text: "文件转Base64",
+          link: "/tools/file-to-base64.md",
+        },
       ],
     },
   ],
