@@ -183,6 +183,10 @@ export default {
           text: "Sort 排序",
           link: "/data-structure/sort.md",
         },
+        {
+          text: "Tween 缓动动画",
+          link: "/data-structure/tween.md",
+        },
       ],
     },
   ],
