@@ -37,7 +37,13 @@ export default defineConfig({
       next: "下一页",
     },
   },
-  
+  vue: {
+    template: {
+      compilerOptions: {
+        customElements: ["water-marker"],
+      },
+    },
+  },
 });
 // plugins: [
 //     docsearchPlugin({
