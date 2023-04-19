@@ -37,4 +37,12 @@ export default defineConfig({
       next: "下一页",
     },
   },
+  
 });
+// plugins: [
+//     docsearchPlugin({
+//       appId: "6I9889IGXP",
+//       apiKey: "b3f542816b2bf2a8b4e86d783e4e6369",
+//       indexName: "jikun",
+//     }),
+//   ],

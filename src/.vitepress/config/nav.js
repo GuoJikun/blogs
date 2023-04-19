@@ -2,33 +2,33 @@ export default [
   // NavbarItem
   {
     text: "Basic",
-    link: "/basic/filter.md",
+    link: "/basic/filter",
   },
   // NavbarGroup
   {
     text: "Vue",
-    link: "/vue/directives/copy.md",
+    link: "/vue/directives/copy",
   },
   {
     text: "数据结构与算法",
-    link: "/data-structure/list.md",
+    link: "/data-structure/list",
   },
   {
     text: "组件文档",
-    link: "/docs/readme.md",
+    link: "/docs/readme",
     children: [
       {
         text: "watermark 水印",
-        link: "/docs/watermark-vue.md",
+        link: "/docs/watermark-vue",
       },
     ],
   },
   {
     text: "小工具",
-    link: "/tools/readme.md",
+    link: "/tools/readme",
   },
   {
     text: "其他",
-    link: "/other/wsl.md",
+    link: "/other/wsl",
   },
 ];
