@@ -1,8 +1,9 @@
 ---
 sidebar: false
+layout: page
 ---
 
-# 个人博客
+## 个人博客
 
 ::: tip 说明
 这是一个基础 `vitepress` 搭建的个人博客类站点，主要分享一些 `html`、`css`、`JavaScript`、`wasm`、`ECMAScript` 方面的知识
