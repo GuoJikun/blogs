@@ -14,7 +14,9 @@
 
 使用`options`中的`displayValue`来控制文字的显示/隐藏
 
+<ClientOnly>
 <yak-barcode text="65556845641" tag="svg" :options="{displayValue:false}"></yak-barcode>
+</ClientOnly>
 
 ```html
 <yak-barcode
@@ -28,7 +30,9 @@
 
 使用`options`中的`lineColor`来控制条码的颜色
 
+<ClientOnly>
 <yak-barcode text="65556845641" tag="svg" :options="{lineColor: '#409eff'}"></yak-barcode>
+</ClientOnly>
 
 ```html
 <yak-barcode

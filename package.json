@@ -16,8 +16,8 @@
   "license": "MIT",
   "devDependencies": {
     "sass": "^1.53.0",
-    "vitepress": "1.0.0-alpha.72",
-    "vue": "^3.2.45"
+    "vitepress": "1.0.0-alpha.75",
+    "vue": "^3.3.2"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.10",

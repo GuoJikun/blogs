@@ -13,7 +13,9 @@
     <p>在此区域内显示自定义右键菜单</p>
     <p>在此区域内显示自定义右键菜单</p>
 </div>
+<ClientOnly>
 <yak-contextmenu container=".content" :options="menus" @menu-click="menuClick"></yak-contextmenu>
+</ClientOnly>
 
 ```html
 <div class="content">

@@ -24,6 +24,7 @@ createApp().use(watermark)
 
 只添加content即可使用水印组件
 
+<ClientOnly>
 <watermark-vue content="测试水印" style="height: 400px;overflow-y: auto" :font="{fontSize: 12}">
     <p>混沌未分天地乱，茫茫渺渺无人见。自从盘古破鸿蒙，开辟从兹清浊辨。</p>
     <p>覆载群生仰至仁，发明万物皆成善。欲知造化会元功，须看西游释厄传。</P>
@@ -32,7 +33,7 @@ createApp().use(watermark)
     <p>再五千四百岁，正当子会，轻清上腾，有日有月有星有辰。日月星辰，谓之四象。故曰天开于子。又经五千四百岁，子会将终，近丑之会，而逐渐坚实。《易》曰：“大哉乾元！至哉坤元！万物资生，乃顺承天。”至此，地始凝结。</P>
     <p>再五千四百岁，正当丑会，重浊下凝，有水有火有山有石有土。水火山石土，谓之五形。故曰地辟于丑。又经五千四百岁，丑会终而寅会之初，发生万物。历曰：“天气下降，地气上升；天地交合，群物皆生。”至此，天清地爽，阴阳交合。</p>
 </watermark-vue>
-
+</ClientOnly>
 
 ```vue
 <watermark-vue content="测试水印" style="height: 400px" :font="{fontSize: 12}"></watermark-vue>
@@ -42,6 +43,7 @@ createApp().use(watermark)
 
 通过修改`font`属性去更改字体相关的配置
 
+<ClientOnly>
 <watermark-vue content="测试水印" style="min-height: 400px;overflow-y: auto" :font="{fontSize: 16,color: 'rgba(100,108,255,0.4)',fontStyle: 'italic'}">
     <p>混沌未分天地乱，茫茫渺渺无人见。自从盘古破鸿蒙，开辟从兹清浊辨。</p>
     <p>覆载群生仰至仁，发明万物皆成善。欲知造化会元功，须看西游释厄传。</P>
@@ -50,7 +52,7 @@ createApp().use(watermark)
     <p>再五千四百岁，正当子会，轻清上腾，有日有月有星有辰。日月星辰，谓之四象。故曰天开于子。又经五千四百岁，子会将终，近丑之会，而逐渐坚实。《易》曰：“大哉乾元！至哉坤元！万物资生，乃顺承天。”至此，地始凝结。</P>
     <p>再五千四百岁，正当丑会，重浊下凝，有水有火有山有石有土。水火山石土，谓之五形。故曰地辟于丑。又经五千四百岁，丑会终而寅会之初，发生万物。历曰：“天气下降，地气上升；天地交合，群物皆生。”至此，天清地爽，阴阳交合。</p>
 </watermark-vue>
-
+</ClientOnly>
 
 ```vue
 <watermark-vue content="测试水印" style="min-height: 400px" :font="{fontSize: 16,color: 'rgba(100,108,255,0.4)',fontStyle: 'italic'}" image="/images/docs/watermark.png"></watermark-vue>
@@ -60,6 +62,7 @@ createApp().use(watermark)
 
 通过修改`image`属性去设置图片水印
 
+<ClientOnly>
 <watermark-vue content="测试水印" style="height: 400px;overflow-y: auto" :font="{fontSize: 16,color: 'rgba(100,108,255,0.4)',fontStyle: 'italic'}" :width="38" :height="45" image="/images/docs/watermark.png">
     <p>混沌未分天地乱，茫茫渺渺无人见。自从盘古破鸿蒙，开辟从兹清浊辨。</p>
     <p>覆载群生仰至仁，发明万物皆成善。欲知造化会元功，须看西游释厄传。</P>
@@ -68,7 +71,7 @@ createApp().use(watermark)
     <p>再五千四百岁，正当子会，轻清上腾，有日有月有星有辰。日月星辰，谓之四象。故曰天开于子。又经五千四百岁，子会将终，近丑之会，而逐渐坚实。《易》曰：“大哉乾元！至哉坤元！万物资生，乃顺承天。”至此，地始凝结。</P>
     <p>再五千四百岁，正当丑会，重浊下凝，有水有火有山有石有土。水火山石土，谓之五形。故曰地辟于丑。又经五千四百岁，丑会终而寅会之初，发生万物。历曰：“天气下降，地气上升；天地交合，群物皆生。”至此，天清地爽，阴阳交合。</p>
 </watermark-vue>
-
+</ClientOnly>
 
 ```vue
 <watermark-vue content="测试水印" style="height: 400px" :font="{fontSize: 16,color: 'rgba(100,108,255,0.4)',fontStyle: 'italic'}" image="/images/docs/watermark.png"></watermark-vue>
