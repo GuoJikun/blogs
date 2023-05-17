@@ -1,47 +1,65 @@
 function createNode(text) {
-  const node = document.createElement("pre");
-  node.style.width = "1px";
-  node.style.height = "1px";
-  node.style.position = "fixed";
-  node.style.top = "5px";
-  node.textContent = text;
-  return node;
+    const node = document.createElement("pre");
+    node.style.width = "1px";
+    node.style.height = "1px";
+    node.style.position = "fixed";
+    node.style.top = "5px";
+    node.textContent = text;
+    return node;
 }
 
 export function copyNode(node) {
-  if ("clipboard" in navigator) {
-    return navigator.clipboard.writeText(node.textContent || "");
-  }
+    return new Promise((resolve, reject) => {
+        if ("clipboard" in navigator) {
+            navigator.clipboard
+                .writeText(node.textContent || "")
+                .then(() => {
+                    resolve(node.textContent || "");
+                })
+                .catch((err) => {
+                    reject(err);
+                });
+        }
 
-  const selection = getSelection();
-  if (selection == null) {
-    return Promise.reject(new Error());
-  }
+        const selection = getSelection();
+        if (selection == null) {
+            reject(new Error());
+        }
 
-  selection.removeAllRanges();
+        selection.removeAllRanges();
 
-  const range = document.createRange();
-  range.selectNodeContents(node);
-  selection.addRange(range);
+        const range = document.createRange();
+        range.selectNodeContents(node);
+        selection.addRange(range);
 
-  document.execCommand("copy");
-  selection.removeAllRanges();
-  return Promise.resolve();
+        document.execCommand("copy");
+        selection.removeAllRanges();
+        resolve(node.textContent || "");
+    });
 }
 
 export function copyText(text) {
-  if ("clipboard" in navigator) {
-    return navigator.clipboard.writeText(text);
-  }
+    return new Promise((resolve, reject) => {
+        if ("clipboard" in navigator) {
+            navigator.clipboard
+                .writeText(text)
+                .then(() => {
+                    resolve(text);
+                })
+                .catch((err) => {
+                    reject(err);
+                });
+        }
 
-  const body = document.body;
-  if (!body) {
-    return Promise.reject(new Error());
-  }
+        const body = document.body;
+        if (!body) {
+            reject(new Error());
+        }
 
-  const node = createNode(text);
-  body.appendChild(node);
-  copyNode(node);
-  body.removeChild(node);
-  return Promise.resolve();
+        const node = createNode(text);
+        body.appendChild(node);
+        copyNode(node);
+        body.removeChild(node);
+        return resolve(text);
+    });
 }

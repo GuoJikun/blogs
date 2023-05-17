@@ -39,6 +39,14 @@ export default defineConfig({
             prev: "上一页",
             next: "下一页",
         },
+        search: {
+            provider: "algolia",
+            options: {
+                appId: "6I9889IGXP",
+                apiKey: "b3f542816b2bf2a8b4e86d783e4e6369",
+                indexName: "jikun",
+            },
+        },
     },
     vue: {
         template: {
@@ -48,10 +56,3 @@ export default defineConfig({
         },
     },
 });
-// plugins: [
-//     docsearchPlugin({
-//       appId: "6I9889IGXP",
-//       apiKey: "b3f542816b2bf2a8b4e86d783e4e6369",
-//       indexName: "jikun",
-//     }),
-//   ],

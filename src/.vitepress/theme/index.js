@@ -8,18 +8,26 @@ import zhCn from "element-plus/es/locale/lang/zh-cn";
 // import watermark from "@jkun/watermark-vue/dist/watermark.js";
 import "@jkun/watermark-vue/dist/index.css";
 
-export default {
-  ...DefaultTheme,
-  Layout,
-  async enhanceApp(ctx) {
-    // extend default theme custom behaviour.
-    DefaultTheme.enhanceApp(ctx);
+import { Copy } from "../directives/copy/index.js";
+import contextmenu from "@jkun/contextmenu";
+import "@jkun/contextmenu/dist/style.css";
 
-    // register your custom global components
-    ctx.app.use(ElementPlus, { locale: zhCn });
-    if (!import.meta.env.SSR) {
-      const watermark = await import("@jkun/watermark-vue/dist/watermark.js");
-      ctx.app.use(watermark);
-    }
-  },
+export default {
+    ...DefaultTheme,
+    Layout,
+    async enhanceApp(ctx) {
+        // extend default theme custom behaviour.
+        DefaultTheme.enhanceApp(ctx);
+
+        // register your custom global components
+        ctx.app.use(ElementPlus, { locale: zhCn });
+        ctx.app.directive("copy", Copy);
+        ctx.app.use(contextmenu, { type: "both" });
+        if (!import.meta.env.SSR) {
+            const watermark = await import(
+                "@jkun/watermark-vue/dist/watermark.js"
+            );
+            ctx.app.use(watermark);
+        }
+    },
 };

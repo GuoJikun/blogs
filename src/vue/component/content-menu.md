@@ -13,8 +13,10 @@
     <p>在此区域内显示自定义右键菜单</p>
     <p>在此区域内显示自定义右键菜单</p>
 </div>
+
 <ClientOnly>
-<yak-contextmenu container=".content" :options="menus" @menu-click="menuClick"></yak-contextmenu>
+<ivy-context-menu container=".content" :options="menus" @menu-click="menuClick">
+</ivy-context-menu>
 </ClientOnly>
 
 ```html
@@ -28,7 +30,7 @@
   <p>在此区域内显示自定义右键菜单</p>
 </div>
 
-<yak-contextmenu container=".content" :options="menus" @menu-click="menuClick"></yak-contextmenu>
+<ivy-contextmenu container=".content" :options="menus" @menu-click="menuClick"></ivy-contextmenu>
 ```
 
 ## 组件属性和事件
