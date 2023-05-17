@@ -5,7 +5,7 @@ import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 import zhCn from "element-plus/es/locale/lang/zh-cn";
 
-// import watermark from "@jkun/watermark-vue/dist/watermark.js";
+import watermark from "@jkun/watermark-vue/dist/watermark.js";
 import "@jkun/watermark-vue/dist/index.css";
 
 import { Copy } from "../directives/copy/index.js";
@@ -23,11 +23,6 @@ export default {
         ctx.app.use(ElementPlus, { locale: zhCn });
         ctx.app.directive("copy", Copy);
         ctx.app.use(contextmenu, { type: "both" });
-        if (!import.meta.env.SSR) {
-            const watermark = await import(
-                "@jkun/watermark-vue/dist/watermark.js"
-            );
-            ctx.app.use(watermark);
-        }
+        ctx.app.use(watermark);
     },
 };
