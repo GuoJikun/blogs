@@ -1,3 +1,14 @@
+const topic = {
+    text: "力扣题解",
+    collapsible: true,
+    items: [
+        {
+            text: "回文数",
+            link: "/data-structure/topic/2023-05-17",
+        },
+    ],
+};
+
 export default {
     "/basic/": [
         {
@@ -189,6 +200,7 @@ export default {
                 },
             ],
         },
+        topic,
     ],
     "/tools/": [
         {
@@ -251,6 +263,10 @@ export default {
                 {
                     text: "更改wsl的安装位置",
                     link: "/other/move-wsl-install-dir",
+                },
+                {
+                    text: "使用jenkins一键发布vue项目",
+                    link: "/other/jenkins-vue",
                 },
             ],
         },
