@@ -153,6 +153,10 @@ export default {
                     text: "vueCli项目添加vite支持",
                     link: "/vue/p202109101",
                 },
+                {
+                    text: "vue 项目接入 Sentry",
+                    link: "/vue/sentry-vue",
+                },
             ],
         },
     ],
