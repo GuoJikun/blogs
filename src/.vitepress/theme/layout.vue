@@ -23,7 +23,6 @@
                     theme="preferred_color_scheme"
                     lang="zh-CN"
                     crossorigin="anonymous"
-                    async
                 ></v-giscus>
             </div>
         </template>
