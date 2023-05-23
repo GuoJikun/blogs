@@ -54,6 +54,10 @@ export default {
             collapsible: true,
             items: [
                 {
+                    text: "javascript 中的错误类型",
+                    link: "/basic/js/error-type",
+                },
+                {
                     text: "Cookie 缓存",
                     link: "/basic/js/cookie",
                 },
