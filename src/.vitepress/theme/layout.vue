@@ -22,7 +22,6 @@
                     inputPosition="top"
                     theme="preferred_color_scheme"
                     lang="zh-CN"
-                    loading="lazy"
                     crossorigin="anonymous"
                     async
                 ></v-giscus>
