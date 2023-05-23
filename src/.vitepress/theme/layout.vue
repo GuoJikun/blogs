@@ -3,6 +3,8 @@
     import VGiscus from "@giscus/vue";
 
     const { Layout } = DefaultTheme;
+    import { useData } from "vitepress";
+    const { title } = useData();
 </script>
 
 <template>
@@ -10,6 +12,7 @@
         <template #doc-after>
             <div style="padding-top: 24px">
                 <v-giscus
+                    :key="title"
                     id="comments"
                     repo="guojikun/blog-vuepress"
                     repoId="MDEwOlJlcG9zaXRvcnkzOTUyNzM1NDg="
