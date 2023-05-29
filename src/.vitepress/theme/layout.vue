@@ -1,6 +1,6 @@
 <script setup>
     import { ref, watch } from "vue";
-    import Giscus from "@giscus/vue";
+
     import DefaultTheme from "vitepress/theme";
     const { Layout } = DefaultTheme;
     import { useData, useRoute } from "vitepress";
