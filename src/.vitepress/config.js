@@ -47,7 +47,7 @@ export default defineConfig({
     vue: {
         template: {
             compilerOptions: {
-                customElements: ["water-marker"],
+                customElements: ["water-marker", "giscus-widget"],
             },
         },
     },

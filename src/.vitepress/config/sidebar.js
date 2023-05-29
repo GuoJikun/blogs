@@ -276,6 +276,10 @@ export default {
                     text: "使用jenkins一键发布vue项目",
                     link: "/other/jenkins-vue",
                 },
+                {
+                    text: "decimal.js 的使用",
+                    link: "/other/decimal",
+                },
             ],
         },
     ],
