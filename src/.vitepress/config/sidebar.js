@@ -1,6 +1,6 @@
 const topic = {
     text: "力扣题解",
-    collapsible: true,
+    collapsed: false,
     items: [
         {
             text: "回文数",
@@ -13,7 +13,7 @@ export default {
     "/basic/": [
         {
             text: "HTML & CSS",
-            collapsible: true,
+            collapsed: false,
             items: [
                 {
                     text: "Filter 滤镜",
@@ -51,7 +51,7 @@ export default {
         },
         {
             text: "Javascript",
-            collapsible: true,
+            collapsed: false,
             items: [
                 {
                     text: "javascript 中的错误类型",
@@ -89,8 +89,26 @@ export default {
             ],
         },
         {
+            text: "Vue",
+            collapsed: false,
+            items: [
+                {
+                    text: "env 配置文件",
+                    link: "/basic/vue/env",
+                },
+                {
+                    text: "vueCli项目添加vite支持",
+                    link: "/basic/vue/p202109101",
+                },
+                {
+                    text: "vue 项目接入 Sentry",
+                    link: "/basic/vue/sentry-vue",
+                },
+            ],
+        },
+        {
             text: "ECMAScript 标准",
-            collapsible: true,
+            collapsed: true,
             items: [
                 {
                     text: "ECMA 2022",
@@ -123,51 +141,34 @@ export default {
             ],
         },
     ],
-    "/vue/": [
-        {
-            text: "指令",
-            items: [
-                {
-                    text: "Copy 复制",
-                    link: "/vue/directives/copy",
-                },
-            ],
-        },
-        {
-            text: "组件",
-            items: [
-                {
-                    text: "ContentMenu 右键菜单",
-                    link: "/vue/component/content-menu",
-                },
-                {
-                    text: "Barcode 条形码",
-                    link: "/vue/component/barcode",
-                },
-            ],
-        },
-        {
-            text: "其它",
-            items: [
-                {
-                    text: "env 配置文件",
-                    link: "/vue/env",
-                },
-                {
-                    text: "vueCli项目添加vite支持",
-                    link: "/vue/p202109101",
-                },
-                {
-                    text: "vue 项目接入 Sentry",
-                    link: "/vue/sentry-vue",
-                },
-            ],
-        },
-    ],
+    // "/vue/": [
+    //     {
+    //         text: "指令",
+    //         items: [
+    //             {
+    //                 text: "Copy 复制",
+    //                 link: "/vue/directives/copy",
+    //             },
+    //         ],
+    //     },
+    //     {
+    //         text: "组件",
+    //         items: [
+    //             {
+    //                 text: "ContentMenu 右键菜单",
+    //                 link: "/vue/component/content-menu",
+    //             },
+    //             {
+    //                 text: "Barcode 条形码",
+    //                 link: "/vue/component/barcode",
+    //             },
+    //         ],
+    //     },
+    // ],
     "/data-structure/": [
         {
             text: "数据结构",
-            collapsible: true,
+            collapsed: false,
             items: [
                 {
                     text: "List 列表",
