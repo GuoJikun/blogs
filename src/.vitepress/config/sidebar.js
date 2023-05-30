@@ -6,6 +6,10 @@ const topic = {
             text: "回文数",
             link: "/data-structure/topic/2023-05-17",
         },
+        {
+            text: "删除字符串中的所有相邻重复项",
+            link: "/data-structure/topic/leetcode-2023-05-30",
+        },
     ],
 };
 
