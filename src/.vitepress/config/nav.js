@@ -15,6 +15,10 @@ export default [
                 text: "watermark 水印",
                 link: "/docs/watermark-vue",
             },
+            {
+                text: "previewImage 图片预览",
+                link: "/docs/preview-image",
+            },
         ],
     },
     {

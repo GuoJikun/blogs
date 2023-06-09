@@ -297,3 +297,45 @@ p.sidebar-item:not(.sidebar-heading) {
 .vp-doc .el-table table {
     margin: 0;
 }
+
+/*Margin*/
+.margin-top-small {
+    margin-top: 8px;
+}
+.margin-top {
+    margin-top: 12px;
+}
+.margin-top-large {
+    margin-top: 24px;
+}
+
+.margin-left-small {
+    margin-left: 8px;
+}
+.margin-left {
+    margin-left: 12px;
+}
+.margin-left-large {
+    margin-left: 24px;
+}
+
+/*Padding*/
+.padding-top-small {
+    padding-top: 8px;
+}
+.padding-top {
+    padding-top: 12px;
+}
+.padding-top-large {
+    padding-top: 24px;
+}
+
+.padding-left-small {
+    padding-left: 8px;
+}
+.padding-left {
+    padding-left: 12px;
+}
+.padding-left-large {
+    padding-left: 24px;
+}
