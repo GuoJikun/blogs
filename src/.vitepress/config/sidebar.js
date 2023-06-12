@@ -242,6 +242,10 @@ export default {
                     text: "previewImage 图片预览",
                     link: "/docs/preview-image",
                 },
+                {
+                    text: "barcode 条形码",
+                    link: "/docs/barcode",
+                },
             ],
         },
     ],
