@@ -2,3 +2,4 @@ node_modules
 src/.vitepress/cache
 src/.vitepress/.temp
 dist
+.vitepress
