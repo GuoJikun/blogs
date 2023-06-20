@@ -29,17 +29,18 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
       # Runs a single command using the runners shell
       - name: 安装pnpm
-        run: npm i -g pnpm
-      - name: 安装依赖
-        run: pnpm i
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.1.0
+          run_install: true
 
       - name: 打包
         run: pnpm run build
