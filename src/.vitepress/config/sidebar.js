@@ -18,6 +18,10 @@ const stencilJs = {
     collapsed: false,
     items: [
         {
+            text: "StencilJs学习之JSX",
+            link: "/basic/stenciljs/jsx",
+        },
+        {
             text: "StencilJs学习之事件",
             link: "/basic/stenciljs/event",
         },
