@@ -13,6 +13,29 @@ const topic = {
     ],
 };
 
+const stencilJs = {
+    text: "StencilJs",
+    collapsed: false,
+    items: [
+        {
+            text: "StencilJs学习之事件",
+            link: "/basic/stenciljs/event",
+        },
+        {
+            text: "StencilJs学习之装饰器",
+            link: "/basic/stenciljs/decorator",
+        },
+        {
+            text: "StencilJs学习之生命周期",
+            link: "/basic/stenciljs/lifecycle",
+        },
+        {
+            text: "StencilJs学习之搭建项目",
+            link: "/basic/stenciljs/create",
+        },
+    ],
+};
+
 export default {
     "/basic/": [
         {
@@ -144,6 +167,7 @@ export default {
                 },
             ],
         },
+        stencilJs,
     ],
     // "/vue/": [
     //     {
