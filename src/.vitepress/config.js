@@ -6,6 +6,20 @@ export default defineConfig({
     base: "/",
     lang: "zh-CN",
     title: "前端小栈",
+    head: [
+        [
+            "script",
+            {
+                src: "//sdk.51.la/js-sdk-pro.min.js",
+                charset: "UTF-8",
+            },
+        ],
+        [
+            "script",
+            {},
+            `LA.init({id:"3F6JYEKcOZnT1i9e",ck:"3F6JYEKcOZnT1i9e"})`,
+        ],
+    ],
     outDir: "../dist",
     lastUpdated: true,
     themeConfig: {
