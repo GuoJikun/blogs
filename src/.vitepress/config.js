@@ -18,7 +18,7 @@ export default defineConfig({
         [
             "script",
             {},
-            `LA.init({id:"3F6JYEKcOZnT1i9e",ck:"3F6JYEKcOZnT1i9e"})`,
+            `LA.init({id:"3F6JYEKcOZnT1i9e",ck:"3F6JYEKcOZnT1i9e", hashMode: true})`,
         ],
     ],
     outDir: "../dist",
