@@ -12,6 +12,10 @@ export default [
         // link: "/docs/readme",
         items: [
             {
+                text: "Volta 中文文档",
+                link: "https://volta.jikun.dev",
+            },
+            {
                 text: "watermark 水印",
                 link: "/docs/watermark-vue",
             },
