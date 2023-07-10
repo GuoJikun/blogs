@@ -16,6 +16,10 @@ export default [
                 link: "https://volta.jikun.dev",
             },
             {
+                text: "StencilJs 中文文档",
+                link: "https://stenciljs.jikun.dev",
+            },
+            {
                 text: "watermark 水印",
                 link: "/docs/watermark-vue",
             },
