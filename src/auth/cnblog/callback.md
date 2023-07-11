@@ -1,10 +1,8 @@
 ---
-layout: page
+layout: false
 ---
 
-
-
-当前href: {{href}}
+当前 href: {{href}}
 
 <script setup>
 import { ref, onMounted } from 'vue';
