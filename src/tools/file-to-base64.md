@@ -1,10 +1,10 @@
 # 文件转 base64 字符串
 
-:::tip 说明
-此功能使用浏览器API实现，您的文件不会被上传到云端。支持上传任意文件格式。
+:::info 注意
+此功能使用浏览器 API 实现，您的文件不会被上传到云端。支持上传任意文件格式。
 :::
 
-<div 
+<div
     :style="{
         display: 'flex',
         justifyContent: 'center',
@@ -26,12 +26,10 @@
     </div>
 </div>
 
-
 <div style="display:flex;justify-content: space-between;align-items: center;padding: 24px 0 16px">
     <span>转化后的Base64 字符串</span>
     <div>
-        <el-button type="primary">复制</el-button>
-        <el-button @click="downloadBase64">下载</el-button>
+        <el-button type="primary" @click="copyValue">复制</el-button>
         <el-button type="danger" @click="clearBase64">清空</el-button>
     </div>
 </div>
@@ -40,6 +38,7 @@
 <script setup>
 import { ref } from 'vue';
 import { UploadFilled } from '@element-plus/icons-vue';
+import { ElMessage } from 'element-plus'
 
 const borderColor = ref('#ccc');
 const setBorderColor = (color)=>{
@@ -49,7 +48,6 @@ const base64Str = ref('')
 const fileToBase64 = file => {
     const reader = new FileReader();
     reader.onload = (ev)=>{
-        console.log('onload')
         base64Str.value = ev.target.result;
     }
     reader.readAsDataURL(file)
@@ -59,7 +57,6 @@ const handlerClick = ()=>{
     inputEl.setAttribute('type','file')
     inputEl.addEventListener('change', (ev)=>{
         const files = ev.target.files;
-        console.log(ev.target.files)
         if(files && files.length > 0){
             if(files.length > 1){
                 alert('一次只能转换一个文件')
@@ -76,24 +73,18 @@ const handlerClick = ()=>{
 
 const handlerDragEnter = ev => {
     ev.preventDefault();
-    
-    console.log(ev.dataTransfer.files);
-
     setBorderColor('#409eff');
 }
 
 const handlerDragLeave = ev => {
     ev.preventDefault();
-    
     console.log(ev.dataTransfer.files);
-
     setBorderColor('#ccc');
 }
 
 const handlerDropEnd = ev => {
     setBorderColor('#ccc');
     const files = ev.dataTransfer.files;
-    console.log(files && files.length > 0)
     if(files && files.length > 0){
         if(files.length > 1){
             alert('一次只能转换一个文件')
@@ -104,24 +95,20 @@ const handlerDropEnd = ev => {
         alert('请选择一个文件')
     }
 }
-// 下载base64 字符串
-const objectUrlInstance = null;
-const downloadBase64 = ()=>{
-    if(base64Str.value === '') return;
-    if(objectUrlInstance){
-        URL.revokeObjectURL(objectUrlInstance);
-        objectUrlInstance = null;
-    }
-    const aEl = document.createElement('a');
-    const file = new Blob([base64Str.value], {type: 'text/plan'});
-    console.log(file)
-    objectUrlInstance = URL.createObjectURL(file);
-    aEl.href = objectUrlInstance;
-    aEl.download="temp.txt"
-    aEl.click();
-}
 
 const clearBase64 = () => {
     base64Str.value = ''
+}
+
+const copyValue = () => {
+    if(base64Str.value === '') return;
+    // 复制文本到剪切板
+    if('clipboard' in window.navigator){
+        window.navigator.clipboard.writeText(base64Str.value).then(()=>{
+            ElMessage.success('已复制到剪切板')
+        }, ()=>{
+            ElMessage.success('复制到剪切板失败')
+        })
+    }
 }
 </script>
