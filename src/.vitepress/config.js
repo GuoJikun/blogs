@@ -70,7 +70,7 @@ export default defineConfig({
     buildEnd: (siteConfig) => {
         const { pages, outDir } = siteConfig;
         const conf = {
-            host: "https://stenciljs.jikun.dev/",
+            host: "https://blog.jikun.dev/",
             pages,
             outDir,
             excludePages: ["auth/cnblog/callback.md"],
