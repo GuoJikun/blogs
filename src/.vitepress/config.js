@@ -68,7 +68,7 @@ export default defineConfig({
         },
     },
     buildEnd: (siteConfig) => {
-        const { pages, outDir, host } = siteConfig;
+        const { pages, outDir } = siteConfig;
         const conf = {
             host: "https://stenciljs.jikun.dev/",
             pages,
