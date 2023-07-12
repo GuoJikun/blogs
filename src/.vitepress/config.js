@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 import sidebar from "./config/sidebar.js";
 import navbar from "./config/nav.js";
+import genSitemap from "./config/gen-sitemap.js";
 
 export default defineConfig({
     base: "/",
@@ -65,5 +66,15 @@ export default defineConfig({
                 customElements: ["water-marker"],
             },
         },
+    },
+    buildEnd: (siteConfig) => {
+        const { pages, outDir, host } = siteConfig;
+        const conf = {
+            host: "https://stenciljs.jikun.dev/",
+            pages,
+            outDir,
+            excludePages: ["auth/cnblog/callback.md"],
+        };
+        genSitemap(conf);
     },
 });
