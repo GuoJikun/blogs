@@ -71,16 +71,18 @@ app.use(foxPreviewImage); // 注册组件
 
 ```vue
 <script setup>
+import { ref } from "vue";
 import { useZIndex } from "element";
-const { currentZIndex, nextZIndex } = useZIndex();
+const { nextZIndex } = useZIndex();
 
+const zIndex = ref(nextZIndex());
 const openFoxPreviewImage = () => {
     // ...
-    nextZIndex();
+    zIndex.value = nextZIndex();
 };
 </script>
 <template>
-    <fox-preview-image :z-index="currentZIndex"></fox-preview-image>
+    <fox-preview-image :z-index="zIndex"></fox-preview-image>
 </template>
 ```
 
