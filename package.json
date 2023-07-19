@@ -25,7 +25,7 @@
     "@jkun/contextmenu": "^1.0.1",
     "@jkun/watermark-vue": "^1.2.1",
     "element-plus": "^2.3.8",
-    "fox-preview-image": "^2.7.0",
+    "fox-preview-image": "^2.7.2",
     "yak-barcode": "^1.1.1"
   }
 }

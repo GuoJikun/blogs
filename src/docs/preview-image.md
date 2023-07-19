@@ -91,8 +91,9 @@ import { reactive } from 'vue'
 import imgA from '/images/docs/preview-image-1.jpg'
 import imgB from '/images/docs/preview-image-2.png'
 import imgC from '/images/docs/preview-image-3.png'
-import {FoxPreviewImage} from 'fox-preview-image'
+import { FoxPreviewImage } from 'fox-preview-image'
 import "fox-preview-image/lib/style.css";
+console.log(imgA)
 
 const moduleA = reactive({
     visible: false,
@@ -101,7 +102,7 @@ const moduleA = reactive({
 
 const moduleB = reactive({
     visible: false,
-    src: [imgA,imgB,imgC]
+    src: [imgA, imgB, imgC]
 })
 
 const showModuleA = () => {
