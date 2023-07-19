@@ -15,17 +15,17 @@
   "author": "GuoJiKun",
   "license": "MIT",
   "devDependencies": {
-    "sass": "^1.62.1",
-    "vitepress": "1.0.0-beta.2",
-    "vue": "^3.3.2"
+    "sass": "^1.63.6",
+    "vitepress": "1.0.0-beta.5",
+    "vue": "^3.3.4"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
-    "@giscus/vue": "^2.2.8",
+    "@giscus/vue": "^2.3.0",
     "@jkun/contextmenu": "^1.0.1",
     "@jkun/watermark-vue": "^1.2.1",
-    "element-plus": "^2.3.4",
-    "fox-preview-image": "^2.6.0",
+    "element-plus": "^2.3.8",
+    "fox-preview-image": "^2.7.0",
     "yak-barcode": "^1.1.1"
   }
 }
