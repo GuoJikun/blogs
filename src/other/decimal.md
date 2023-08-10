@@ -15,7 +15,7 @@ An arbitrary-precision Decimal type for JavaScript.
 -   在引擎盖下被[数学使用.js](https://github.com/josdejong/mathjs)
 -   包括一个 TypeScript 声明文件：_decimal.d.ts_
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/efcc7285db614fa8b0ded9b726878207~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](/images/other/decimal/api.png)
 
 ## 安装
 
