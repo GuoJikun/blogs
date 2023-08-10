@@ -19,7 +19,7 @@ An arbitrary-precision Decimal type for JavaScript.
 
 ## 安装
 
-该库是单个 JavaScript 文件十*进制.js*或 ES 模块十*进制.mjs*。
+该库是单个 JavaScript 文件 _decimal.js_ 或 ES 模块 _decimal.mjs_。
 
 浏览器：
 
