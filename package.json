@@ -16,7 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "sass": "^1.65.1",
-    "vitepress": "1.0.0-rc.4",
+    "vitepress": "1.0.0-rc.20",
     "vue": "^3.3.4"
   },
   "dependencies": {
@@ -25,7 +25,7 @@
     "@jkun/contextmenu": "^1.0.1",
     "@jkun/watermark-vue": "^1.2.1",
     "element-plus": "^2.3.9",
-    "fox-preview-image": "^2.7.2",
+    "fox-preview-image": "^2.8.1",
     "yak-barcode": "^1.1.1"
   }
 }

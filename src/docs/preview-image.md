@@ -91,7 +91,7 @@ import { reactive } from 'vue'
 import imgA from '/images/docs/preview-image-1.jpg'
 import imgB from '/images/docs/preview-image-2.png'
 import imgC from '/images/docs/preview-image-3.png'
-import { FoxPreviewImage } from 'fox-preview-image'
+import foxPreviewImage from 'fox-preview-image'
 import "fox-preview-image/lib/style.css";
 console.log(imgA)
 
