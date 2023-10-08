@@ -1,11 +1,41 @@
 export default [
     {
-        text: "基础知识",
-        link: "/basic/filter",
+        text: "Web 基础",
+        items: [
+            { text: "HTML & CSS", link: "/basic/filter" },
+            { text: "JavaScript", link: "/basic/js/error-type" },
+            { text: "ECMA", link: "/basic/ecma/" },
+        ],
+    },
+    {
+        text: "框架",
+        items: [
+            {
+                text: "StencilJs",
+                link: "/framework/stenciljs/",
+            },
+            {
+                text: "Vue",
+                link: "/framework/vue/",
+            },
+        ],
     },
     {
         text: "数据结构与算法",
-        link: "/data-structure/list",
+        items: [
+            {
+                text: "数据结构",
+                link: "/data-structure/list",
+            },
+            {
+                text: "LeetCode",
+                link: "/data-structure/topic/",
+            },
+        ],
+    },
+    {
+        text: "设计模式",
+        link: "/design-pattern/",
     },
     {
         text: "文档",

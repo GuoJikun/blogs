@@ -19,27 +19,27 @@ const stencilJs = {
     items: [
         {
             text: "StencilJs 终章之组件开发",
-            link: "/basic/stenciljs/learn",
+            link: "/framework/stenciljs/learn",
         },
         {
             text: "StencilJs学习之JSX",
-            link: "/basic/stenciljs/jsx",
+            link: "/framework/stenciljs/jsx",
         },
         {
             text: "StencilJs学习之事件",
-            link: "/basic/stenciljs/event",
+            link: "/framework/stenciljs/event",
         },
         {
             text: "StencilJs学习之装饰器",
-            link: "/basic/stenciljs/decorator",
+            link: "/framework/stenciljs/decorator",
         },
         {
             text: "StencilJs学习之生命周期",
-            link: "/basic/stenciljs/lifecycle",
+            link: "/framework/stenciljs/lifecycle",
         },
         {
             text: "StencilJs学习之搭建项目",
-            link: "/basic/stenciljs/create",
+            link: "/framework/stenciljs/create",
         },
     ],
 };
@@ -124,24 +124,6 @@ export default {
             ],
         },
         {
-            text: "Vue",
-            collapsed: false,
-            items: [
-                {
-                    text: "env 配置文件",
-                    link: "/basic/vue/env",
-                },
-                {
-                    text: "vueCli项目添加vite支持",
-                    link: "/basic/vue/p202109101",
-                },
-                {
-                    text: "vue 项目接入 Sentry",
-                    link: "/basic/vue/sentry-vue",
-                },
-            ],
-        },
-        {
             text: "ECMAScript 标准",
             collapsed: true,
             items: [
@@ -175,32 +157,35 @@ export default {
                 },
             ],
         },
+    ],
+    "/framework/": [
+        {
+            text: "Vue",
+            collapsed: false,
+            items: [
+                {
+                    text: "env 配置文件",
+                    link: "/framework/vue/env",
+                },
+                {
+                    text: "vueCli项目添加vite支持",
+                    link: "/framework/vue/p202109101",
+                },
+                {
+                    text: "vue 项目接入 Sentry",
+                    link: "/framework/vue/sentry-vue",
+                },
+            ],
+        },
+
         stencilJs,
     ],
-    // "/vue/": [
-    //     {
-    //         text: "指令",
-    //         items: [
-    //             {
-    //                 text: "Copy 复制",
-    //                 link: "/vue/directives/copy",
-    //             },
-    //         ],
-    //     },
-    //     {
-    //         text: "组件",
-    //         items: [
-    //             {
-    //                 text: "ContentMenu 右键菜单",
-    //                 link: "/vue/component/content-menu",
-    //             },
-    //             {
-    //                 text: "Barcode 条形码",
-    //                 link: "/vue/component/barcode",
-    //             },
-    //         ],
-    //     },
-    // ],
+    "/design-pattern/": [
+        {
+            text: "单例模式",
+            link: "/design-pattern/singleton",
+        },
+    ],
     "/data-structure/": [
         {
             text: "数据结构",
