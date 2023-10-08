@@ -34,11 +34,11 @@ WSL(Windows Subsystem for Linux)：`Windows`  系统中的一个子系统，在
 
 或者直接在搜索窗口中输入  `windows terminal`, 然后选择以管理员方式运行：
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b1221a22ba054d9480a96713567ee734~tplv-k3u1fbpfcp-watermark.image)
+![image.png](/images/other/wslg/1.png)
 
 `windows terminal`  的窗口是：
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2c78ca52f5b0451d8250a84ea82229c7~tplv-k3u1fbpfcp-watermark.image)
+![image.png](/images/other/wslg/2.png)
 
 可以把  `windows terminal`  理解成升级版的、功能更强劲的  `PowerShell/cmd`。
 
@@ -47,7 +47,7 @@ WSL(Windows Subsystem for Linux)：`Windows`  系统中的一个子系统，在
 ```bash
 # 开启linux子系统
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-#开启虚拟机平台
+# 开启虚拟机平台
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
@@ -57,11 +57,11 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 点击左侧的  【启动或关闭 Windows 功能】：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d3c481c6878e45beb65f27b326d97da1~tplv-k3u1fbpfcp-watermark.image)
+![image.png](/images/other/wslg/3.png)
 
 弹出下面这个窗口：
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/162fdc9d9ab0400c942f4fbb38b387c5~tplv-k3u1fbpfcp-watermark.image)
+![image.png](/images/other/wslg/4.png)
 
 需要勾选【适用于 Linux 的 Windows 子系统】和【虚拟机平台】这两项。
 
@@ -77,12 +77,12 @@ wsl --set-default-version 2
 
 ```bash
 wsl --update
-wsl --install // 安装wslg
+wsl --install # 安装wslg
 ```
 
 > 如果更新失败可以在更新设置中打开`接收其它Microsoft产品的更新`选项
 >
-> ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8d28342e25a445e686cdaeb2885d6c15~tplv-k3u1fbpfcp-watermark.image)
+> ![image.png](/images/other/wslg/5.png)
 
 ## 安装 Ubuntu-20.04 操作系统
 
@@ -91,30 +91,30 @@ wsl --install // 安装wslg
 **查看可安装版本**
 
 ```bash
-wsl --list --online // 列出所有可安装的linux版本
+wsl --list --online # 列出所有可安装的linux版本
 ```
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a295c7db89d141e7a27ccfdb6d6262c4~tplv-k3u1fbpfcp-watermark.image)
+![image.png](/images/other/wslg/6.png)
 
 **开始安装**
 
 ```bash
-wsl --install -d Ubuntu-20.04 // 安装Ubuntu-20.04
+wsl --install -d Ubuntu-20.04 # 安装Ubuntu-20.04
 ```
 
 ### 安装方式 2-图形化（windows store）
 
 启动 【Windows Store】并搜索  `Ubuntu`，然后选择要安装的系统
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/934fde56c8fc482b94ef3da24602b0c0~tplv-k3u1fbpfcp-watermark.image)
+![image.png](/images/other/wslg/7.png)
 
 安装完成之后，点击【启动】按钮(图片-侵删)：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3fc2cd342b6f4f54a92fb8d986958099~tplv-k3u1fbpfcp-zoom-1.image)
+![](/images/other/wslg/8.png)
 
 第一次打开速度稍微慢一些，大约 1 分钟左右吧，提示设置用户名、密码，然后就进入我们熟悉的窗口了(图片-侵删)：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1e8b7a77d1f34fab8bd9ec0f7ee6bacb~tplv-k3u1fbpfcp-zoom-1.image)
+![](/images/other/wslg/9.png)
 
 这样，`Ubuntu-20.04`  系统就安装好了！
 
@@ -123,16 +123,16 @@ wsl --install -d Ubuntu-20.04 // 安装Ubuntu-20.04
 ```bash
 sudo apt update
 sudo apt upgrade
-sudo apt install gedit // gnome桌面下的编辑器
+sudo apt install gedit # gnome桌面下的编辑器
 ```
 
 命令执行完成功后会在开始菜单下生成`Ubuntu-20.04`文件下（如下图）
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/98a18d0226de44c68b337ca86deaa675~tplv-k3u1fbpfcp-watermark.image)
+![image.png](/images/other/wslg/10.png)
 
 打开程序后如下图
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3f1f8fb44158460e86cf42091f8d1b8d~tplv-k3u1fbpfcp-watermark.image)
+![image.png](/images/other/wslg/11.png)
 
 至此在 win11 下安装 wslg 教程完成。
 

@@ -7,9 +7,9 @@
 1. 一台电脑
 2. 可以联网
 
-## 一、安装docker
+## 一、安装 docker
 
-使用的windows版本的 `docker Desktop`, 可以直接去 docker Desktop [官方网站](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=module)去下载，下载完成后正常安装就可以了。
+使用的 windows 版本的 `docker Desktop`, 可以直接去 docker Desktop [官方网站](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=module)去下载，下载完成后正常安装就可以了。
 
 或者使用 `winget` 安装
 
@@ -19,12 +19,12 @@ winget install Docker.DockerDesktop
 
 ### linux 下的安装
 
-直接使用各个发行版对应的 pkg manangment 安装，由于本人最熟悉ubuntu，下面给出ubuntu下的安装命令
+直接使用各个发行版对应的 pkg manangment 安装，由于本人最熟悉 ubuntu，下面给出 ubuntu 下的安装命令
 
 ```bash
 #Ubuntu
 apt install docker
-apt install docker-compose // 如需要使用docker-compose可以使用此命令安装
+apt install docker-compose # 如需要使用docker-compose可以使用此命令安装
 ```
 
 ## 二、基于 Docker 安装 Verdaccio
@@ -83,7 +83,7 @@ uplinks:
 
 packages:
 	# 作用域包
-  '@*/*':  
+  '@*/*':
     # 允许所有人访问
     access: $all
     # 注册用户可访问
@@ -138,11 +138,12 @@ docker run -it --name verdaccio \
 -v /opt/Docker-container/Verdanccio/plugins:/verdaccio/plugins \
 verdaccio/verdaccio
 ```
+
 > 运行成功后就可以通过`http://服务器ip:4873`访问`npm`私有库了。
 
 报错处理：
 
-如果提示 ` fatal--- cannot open config file /verdaccio/conf/config.yaml: Error: CONFIG: it does not look like a valid config file`, 可以执行下面的命令
+如果提示 `fatal--- cannot open config file /verdaccio/conf/config.yaml: Error: CONFIG: it does not look like a valid config file`, 可以执行下面的命令
 
 ```bash
 chcon -Rt container_file_t ./conf
@@ -150,30 +151,29 @@ chcon -Rt container_file_t ./conf
 
 更多解决方法请查看[官方文档](https://verdaccio.org/zh-CN/docs/docker)
 
-
 ## 三、管理 npn、yarn、pnpm 源
 
 ### 1、替换 npn、yarn、pnpm 源为 `http://192.168.188.164:4873/`
 
 ```bash
-#npm和pnpm 设置（pnpm使用npm配置的源）
+# npm 和 pnpm 设置（pnpm 使用 npm 配置的源）
 npm config set registry http://192.168.188.164:4873/
 # yarn 设置
-yarn config set registry http://192.168.188.164:4873/ #-g是全局设置
+yarn config set registry http://192.168.188.164:4873/ # -g是全局设置
 ```
 
-直接把默认的`npm`源替换为我们私有库，但是多个源的时候不太好管理。所以推荐使用`nrm`来管理我们的`npm`源。
+直接把默认的 `npm` 源替换为我们私有库，但是多个源的时候不太好管理。所以推荐使用 `nrm` 来管理我们的 `npm` 源。
 
 ### 2、使用 `nrm` 管理 `npm` 源
 
 ```bash
-# 全局安装nrm
+# 全局安装 nrm
 $ npm i -g nrm
 
 # 添加私有库
 $ nrm add vnpm http://192.168.188.164:4873
 
-# 查看现有的npm源
+# 查看现有的 npm 源
 $ nrm ls
 
   npm ---------- https://registry.npmjs.org/
@@ -191,7 +191,7 @@ $ nrm use vnpm
 
 > 管理 `yarn` 的源，可以使用 `yrm` 来管理；用法同 `nrm`
 
-## 四、注册用户和发布npm包
+## 四、注册用户和发布 npm 包
 
 ### 1、注册私有库用户
 
@@ -213,7 +213,7 @@ $ npm who am i
 ### 3、在私有库发布包
 
 ```bash
-# 发布当前包 
+# 发布当前包
 $ npm publish
 ```
 
