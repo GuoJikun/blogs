@@ -1,7 +1,6 @@
 import { defineConfig } from "vitepress";
 import sidebar from "./config/sidebar.js";
 import navbar from "./config/nav.js";
-import genSitemap from "./config/gen-sitemap.js";
 
 export default defineConfig({
     base: "/",
@@ -67,14 +66,13 @@ export default defineConfig({
             },
         },
     },
-    buildEnd: (siteConfig) => {
-        const { pages, outDir } = siteConfig;
-        const conf = {
-            host: "https://blog.jikun.dev/",
-            pages,
-            outDir,
-            excludePages: ["auth/cnblog/callback.md"],
-        };
-        genSitemap(conf);
+    sitemap: {
+        hostname: "https://blog.jikun.dev/",
+        transformItems: (items) => {
+            // add new items or modify/filter existing items
+            return items.filter(
+                (item) => item.url !== "auth/cnblog/callback.html"
+            );
+        },
     },
 });
