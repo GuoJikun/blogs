@@ -40,7 +40,9 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: 8.1.0
-          run_install: true
+
+      - name: 安装依赖
+        run: pnpm i --no-frozen-lockfile
 
       - name: 打包
         run: pnpm run build
