@@ -50,6 +50,10 @@ export default [
                 link: "https://stenciljs.jikun.dev",
             },
             {
+                text: "@ivy-design/ce 文档",
+                link: "https://ce.ivy-design.press",
+            },
+            {
                 text: "watermark 水印",
                 link: "/docs/watermark-vue",
             },
