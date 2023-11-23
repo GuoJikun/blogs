@@ -6,16 +6,16 @@
 
 ## 模块划分
 
-- Basic：主要包括`html`，`css`，`JavaScript`相关的知识和常见的`utils`函数
-- Vue：主要包括 vue 组件和自定义指令
-- 数据结构与算法：一些常见数据结构的 JavaScript 实现和基础算法(sort,hash)
-- 小工具：会逐渐补充一些前端开发用的到的小工具
-- 其他：不包含上面的其他内容
+-   Basic：主要包括`html`，`css`，`JavaScript`相关的知识和常见的`utils`函数
+-   Vue：主要包括 vue 组件和自定义指令
+-   数据结构与算法：一些常见数据结构的 JavaScript 实现和基础算法(sort,hash)
+-   小工具：会逐渐补充一些前端开发用的到的小工具
+-   其他：不包含上面的其他内容
 
 ## 快速开始
 
 ```bash
-- Clone the https://github.com/GuoJikun/blog-vuepress.git
+- Clone the https://github.com/GuoJikun/blogs.git
 - Install package yarn install
 - Development run yarn run dev
 - Open http://localhost:8080 in your browser.

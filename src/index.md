@@ -24,7 +24,7 @@ PS：欢迎任何人共建
 ## 快速开始
 
 ```bash
-- Clone the https://github.com/GuoJikun/blog-vuepress.git
+- Clone the https://github.com/GuoJikun/blogs.git
 - Install package pnpm install
 - Development run pnpm run dev
 - Open http://localhost:9010 in your browser.

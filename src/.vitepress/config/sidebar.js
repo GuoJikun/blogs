@@ -310,6 +310,10 @@ export default {
                     text: "decimal.js 的使用",
                     link: "/other/decimal",
                 },
+                {
+                    text: "Windows Terminal 简单美化",
+                    link: "/other/terminal-config",
+                },
             ],
         },
     ],
