@@ -15,7 +15,8 @@
 
 比如说，一个由大于或等于 0 的整数组成的自然数集合：N = {0, 1, 2, 3, 4, 5, 6, …}。集合中的对象列表用花括号（{}）包围。
 
-还有一个概念叫空集。空集就是不包含任何元素的集合。比如 24 和 29 之间的素数集合，由于 24 和 29 之间没有素数（除了 1 和自身，没有其他正因数的、大于 1 的自然数），这个集合就是空集。空集用{ }表示。
+还有一个概念叫空集。空集就是不包含任何元素的集合。比如 24 和 29 之间的素数集合，由于 24 和 29 之间没有素数（除了 1 和自身，
+没有其他正因数的、大于 1 的自然数），这个集合就是空集。空集用 `{ }` 表示。
 
 你也可以把集合想象成一个既没有重复元素，也没有顺序概念的数组。在数学中，集合也有并集、交集、差集等基本运算。本文也会介绍这些运算。
 
@@ -28,12 +29,13 @@
 ```js
 class Set {
     constructor() {
-        this.items = {}
+        this.items = {};
     }
 }
 ```
 
-> 有一个非常重要的细节是，我们使用对象而不是数组来表示集合（items）。不过，也可以用数组实现。此处用对象来实现，和我们在第 4 章与第 5 章中学习到的对象实现方式很相似。同样地，JavaScript 的对象不允许一个键指向两个不同的属性，也保证了集合里的元素都是唯一的。
+> 有一个非常重要的细节是，我们使用对象而不是数组来表示集合（items）。不过，也可以用数组实现。
+> 此处用对象来实现，和我们在第 4 章与第 5 章中学习到的对象实现方式很相似。同样地，JavaScript 的对象不允许一个键指向两个不同的属性，也保证了集合里的元素都是唯一的。
 
 接下来，需要声明一些集合可用的方法（我们会尝试模拟与 ECMAScript 2015 实现相同的 Set 类）。
 
@@ -70,9 +72,8 @@ add(item) {
 }
 ```
 
-对于给定的 item，可以检查它是否存在于集合中。如果不存在，就把 item 添加到
-集合中，并返回 true，表示添加了该元素。如果集合中已经有了这个元素，就返回 false，
-表示没有添加它。
+对于给定的 item，可以检查它是否存在于集合中。如果不存在，就把 item 添加到集合中，并返回 true，表示添加了该元素。
+如果集合中已经有了这个元素，就返回 false，表示没有添加它。
 
 ### delete(item) 和 clear() 方法
 
@@ -134,24 +135,28 @@ values() {
 现在数据结构已经完成了，看看如何使用它吧。试着执行一些命令，测试我们的 Set 类。
 
 ```js
-const set = new Set()
-set.add(1)
-console.log(set.values()) // 输出[1]
-console.log(set.has(1)) // 输出 true
-console.log(set.size()) // 输出 1
-set.add(2)
-console.log(set.values()) // 输出[1, 2]
-console.log(set.has(2)) // 输出 true
-console.log(set.size()) // 输出 2
-set.delete(1)
-console.log(set.values()) // 输出[2]
-set.delete(2)
-console.log(set.values()) // 输出[]
+const set = new Set();
+set.add(1);
+console.log(set.values()); // 输出[1]
+console.log(set.has(1)); // 输出 true
+console.log(set.size()); // 输出 1
+set.add(2);
+console.log(set.values()); // 输出[1, 2]
+console.log(set.has(2)); // 输出 true
+console.log(set.size()); // 输出 2
+set.delete(1);
+console.log(set.values()); // 输出[2]
+set.delete(2);
+console.log(set.values()); // 输出[]
 ```
 
 ## 集合运算
 
-集合是数学中基础的概念，在计算机领域也非常重要。它在计算机科学中的主要应用之一是数据库，而数据库是大多数应用程序的根基。集合被用于查询的设计和处理。当我们创建一条从关系型数据库（Oracle、Microsoft SQL Server、MySQL 等）中获取一个数据集合的查询语句时，使用的就是集合运算，并且数据库也会返回一个数据集合。当我们创建一条 `SQL` 查询命令时，可以指定是从表中获取全部数据还是获取其中的子集；也可以获取两张表共有的数据、只存在于一张表中的数据（不存在于另一张表中），或是存在于两张表内的数据（通过其他运算）。这些 `SQL` 领域的运算叫作联接，而 `SQL` 联接的基础就是集合运算。
+集合是数学中基础的概念，在计算机领域也非常重要。它在计算机科学中的主要应用之一是数据库，而数据库是大多数应用程序的根基。
+集合被用于查询的设计和处理。当我们创建一条从关系型数据库（Oracle、Microsoft SQL Server、MySQL 等）中获取一个数据集合的查询语句时，使用的就是集合运算，
+并且数据库也会返回一个数据集合。当我们创建一条 `SQL` 查询命令时，可以指定是从表中获取全部数据还是获取其中的子集；
+也可以获取两张表共有的数据、只存在于一张表中的数据（不存在于另一张表中），或是存在于两张表内的数据（通过其他运算）。
+这些 `SQL` 领域的运算叫作联接，而 `SQL` 联接的基础就是集合运算。
 
 我们可以对集合进行如下运算。
 
@@ -172,7 +177,7 @@ $$
 
 意思是 x（元素）存在于 A 中，或 x 存在于 B 中。下图展示了并集运算。
 
-![union.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/caf57f98c03b4538aa7c9f1c6de3cfac~tplv-k3u1fbpfcp-watermark.image)
+![1.png](/images/data-structure/set/1.png)
 
 代码实现
 
@@ -201,7 +206,7 @@ $$
 
 意思是 x（元素）存在于 A 中，且 x 存在于 B 中。下图展示了交集运算。
 
-![intersection.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/664d8d76875442e280f10633b216a4c5~tplv-k3u1fbpfcp-watermark.image)
+![2.png](/images/data-structure/set/2.png)
 
 代码实现
 
@@ -237,7 +242,7 @@ $$
 
 意思是 x（元素）存在于 A 中，且 x 不存在于 B 中。下图展示了集合 A 和集合 B 的差集运算。
 
-![difference.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c77b0cf27e8c41b181700f0846d96099~tplv-k3u1fbpfcp-watermark.image)
+![3.png](/images/data-structure/set/3.png)
 
 代码实现
 
@@ -264,7 +269,7 @@ $$
 
 意思是集合 A 中的每一个 x（元素），也需要存在于集合 B 中。下图展示了集合 A 是集合 B 的子集。
 
-![isSubsetOf.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/90a8dac147f94ec38efe4e604c49f12f~tplv-k3u1fbpfcp-watermark.image)
+![4.png](/images/data-structure/set/4.png)
 
 代码实现
 
