@@ -2,9 +2,9 @@
 
 ## 背景
 
-公司web项目长期处于裸奔状态，大部分问题定位和复现困难，故想引入个的异常监控系统来解决。
+公司 web 项目长期处于裸奔状态，大部分问题定位和复现困难，故想引入个的异常监控系统来解决。
 
-Sentry有 [开源版](https://github.com/getsentry/self-hosted) 和 [Sass](https://sentry.io/) 版 ，可根据自身需要去选择。
+Sentry 有 [开源版](https://github.com/getsentry/self-hosted) 和 [Sass](https://sentry.io/) 版 ，可根据自身需要去选择。
 
 ## 部署
 
@@ -23,6 +23,16 @@ docker-compose up -d
 
 如果上面的命令没有报错，就可以通过 `localhost:9000` 来访问 sentry
 
+:::warning 注意
+如果在 wsl2 中执行 `install.sh` 失败，可以尝试在 wsl2 中的 `/etc/wsl.conf` 中添加如下配置
+
+```ini
+[boot]
+systemd=true
+```
+
+:::
+
 ## 在 vue 中使用
 
 ::: warning 项目说明
@@ -39,8 +49,8 @@ npm i @sentry/vue
 
 ```js
 // main.js
-import { createApp } from "vue"
-import router from './router'
+import { createApp } from "vue";
+import router from "./router";
 import * as Sentry from "@sentry/vue";
 
 import { default as packages } from "../package.json";
