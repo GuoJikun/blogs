@@ -6,7 +6,7 @@ WSL(Windows Subsystem for Linux)：`Windows`  系统中的一个子系统，在
 
 可以让开发人员直接在  `Windows`  上按原样运行  `GNU/Linux`  环境（包括大多数命令行工具、实用工具和应用程序），且不会产生传统虚拟机或双启动设置开销。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/45d50080824c40da96b269053664222a~tplv-k3u1fbpfcp-zoom-1.image)
+![](/images/other/wslg/0.png)
 
 ## 什么是 WSL2？
 
