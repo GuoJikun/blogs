@@ -314,6 +314,10 @@ export default {
                     text: "Windows Terminal 简单美化",
                     link: "/other/terminal-config",
                 },
+                {
+                    text: "Web 前端工程的装机必备软件",
+                    link: "/other/windows-env-setting",
+                },
             ],
         },
     ],
