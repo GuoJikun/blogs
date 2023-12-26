@@ -175,6 +175,10 @@ export default {
                     text: "vue 项目接入 Sentry",
                     link: "/framework/vue/sentry-vue",
                 },
+                {
+                    text: "lottie 动画在 vue 中的使用",
+                    link: "/framework/vue/lottie",
+                },
             ],
         },
 
