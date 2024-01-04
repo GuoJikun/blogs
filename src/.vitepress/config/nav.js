@@ -21,22 +21,28 @@ export default [
         ],
     },
     {
-        text: "数据结构与算法",
+        text: "计算机基础",
         items: [
             {
-                text: "数据结构",
-                link: "/data-structure/list",
+                text: "数据结构与算法",
+                items: [
+                    {
+                        text: "数据结构",
+                        link: "/data-structure/list",
+                    },
+                    {
+                        text: "LeetCode",
+                        link: "/data-structure/topic/",
+                    },
+                ],
             },
             {
-                text: "LeetCode",
-                link: "/data-structure/topic/",
+                text: "设计模式",
+                link: "/design-pattern/",
             },
         ],
     },
-    {
-        text: "设计模式",
-        link: "/design-pattern/",
-    },
+
     {
         text: "文档",
         // link: "/docs/readme",
