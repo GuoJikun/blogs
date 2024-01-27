@@ -31,7 +31,7 @@
 
 5. 在“Parameter Type”中选择 “branch”.
 
-![Alt text](/assets/other/jenkins-plugin-git-params/image.png)
+![Alt text](/images/other/jenkins-plugin-git-params/image.png)
 
 ## 步骤三：配置构建脚本
 
