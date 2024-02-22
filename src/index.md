@@ -1,6 +1,6 @@
 ---
 sidebar: false
-layout: page
+layout: home
 ---
 
 # 个人博客
