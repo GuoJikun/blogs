@@ -15,16 +15,16 @@
   "author": "GuoJiKun",
   "license": "MIT",
   "devDependencies": {
-    "sass": "^1.69.7",
+    "sass": "^1.71.1",
     "vitepress": "1.0.0-rc.44",
-    "vue": "^3.4.4"
+    "vue": "^3.4.19"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
     "@giscus/vue": "^2.4.0",
     "@jkun/contextmenu": "^1.0.1",
     "@jkun/watermark-vue": "^1.2.1",
-    "element-plus": "^2.4.4",
+    "element-plus": "^2.5.6",
     "fox-preview-image": "^2.9.0",
     "yak-barcode": "^1.1.1"
   }
