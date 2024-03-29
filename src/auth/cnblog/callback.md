@@ -4,14 +4,15 @@ layout: false
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import './uni-webview.js'
+
 
 const getParamMap = href => {
     return new URLSearchParams(href);
 }
 
 const href = ref('');
-onMounted(()=>{
+onMounted(async ()=>{
+    await import('./uni-webview.js')
     href.value = location.href;
     const tmp = getParamMap(location.hash?.replace('#','?'));
     const platform = tmp.get('state');
