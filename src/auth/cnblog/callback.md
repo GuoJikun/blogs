@@ -2,10 +2,9 @@
 layout: false
 ---
 
-当前 href: {{href}}
-
 <script setup>
 import { ref, onMounted } from 'vue';
+import './uni-webview.js'
 
 const getParamMap = href => {
     return new URLSearchParams(href);
@@ -31,8 +30,9 @@ onMounted(()=>{
         setTimeout(() => {
             a.click();
         }, 10);
-        
         console.log('a 被点击了')
+    } else if(platform.startsWith('uni')) {
+        uni.webView.postMessage([code])
     }else{
         console.log('其他来源')
     }
