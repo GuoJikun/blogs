@@ -1,5 +1,4 @@
 ---
-import P from "../../dist/assets/auth_cnblog_callback.md.BaiNV3KC";
 import LayoutDefault from "../layouts/home.astro"
 import { getCollection, getEntry } from 'astro:content';
 
@@ -35,9 +34,8 @@ const { title} =  Astro.props
 		<title>Astro</title>
 	</head>
 	<body>
-		
-		<LayoutDefault title={title}>
-			
+		<div>
+			<LayoutDefault title={title} />
 		</div>
 	</body>
 </html>
