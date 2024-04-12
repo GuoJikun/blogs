@@ -1,6 +1,8 @@
-# 更改wsl中系统的安装位置
+---
+title: 更改wsl中系统的安装位置
+---
 
-wsl默认安装位置是C盘，众所周知C盘总是不够用的，所以才有了把wsl的系统迁移到其它位置的需求。[官网文档](https://learn.microsoft.com/zh-cn/windows/wsl/use-custom-distro)
+wsl 默认安装位置是 C 盘，众所周知 C 盘总是不够用的，所以才有了把 wsl 的系统迁移到其它位置的需求。[官网文档](https://learn.microsoft.com/zh-cn/windows/wsl/use-custom-distro)
 
 ## 首先查看所有分发版本
 
@@ -8,7 +10,7 @@ wsl默认安装位置是C盘，众所周知C盘总是不够用的，所以才有
 wsl -l --all -v
 ```
 
-## 导出分发版为tar文件到D盘
+## 导出分发版为 tar 文件到 D 盘
 
 ```bash
 wsl --export Ubuntu-20.04 D:\ubuntu20.04.tar
@@ -20,7 +22,7 @@ wsl --export Ubuntu-20.04 D:\ubuntu20.04.tar
 wsl --unregister Ubuntu-20.04
 ```
 
-## 重新导入并安装分发版在D:\wsl\ubuntu
+## 重新导入并安装分发版在 D:\wsl\ubuntu
 
 ```bash
 wsl --import Ubuntu-20.04 D:\wsl\ubuntu D:\ubuntu20.04.tar --version 2
@@ -32,7 +34,7 @@ wsl --import Ubuntu-20.04 D:\wsl\ubuntu D:\ubuntu20.04.tar --version 2
 ubuntu2004 config --default-user Username
 ```
 
-删除导出的tar文件(可选)
+删除导出的 tar 文件(可选)
 
 ```bash
 del D:\ubuntu20.04.tar

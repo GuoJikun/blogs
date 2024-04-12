@@ -1,31 +1,19 @@
 {
   "name": "blogs",
-  "version": "1.0.0",
-  "description": "",
   "type": "module",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "version": "0.0.1",
   "scripts": {
-    "dev": "vitepress dev src --port 9010",
-    "build": "vitepress build src",
-    "preview": "vitepress preview src --port 9011"
-  },
-  "author": "GuoJiKun",
-  "license": "MIT",
-  "devDependencies": {
-    "sass": "^1.71.1",
-    "vitepress": "1.0.1",
-    "vue": "^3.4.19"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@element-plus/icons-vue": "^2.3.1",
-    "@giscus/vue": "^2.4.0",
-    "@jkun/contextmenu": "^1.0.1",
-    "@jkun/watermark-vue": "^1.2.1",
-    "element-plus": "^2.5.6",
-    "fox-preview-image": "^2.9.0",
-    "yak-barcode": "^1.1.1"
+    "@astrojs/check": "^0.5.10",
+    "@astrojs/vue": "4.1.0",
+    "astro": "^4.6.0",
+    "typescript": "^5.4.5",
+    "vue": "3.4.21"
   }
 }

@@ -1,0 +1,43 @@
+---
+import P from "../../dist/assets/auth_cnblog_callback.md.BaiNV3KC";
+import LayoutDefault from "../layouts/home.astro"
+import { getCollection, getEntry } from 'astro:content';
+
+// 获取集合中的所有条目。
+// 需要集合的名称作为参数。
+// 示例：检索 `src/content/blog/**`
+const docs = await getCollection('docs');
+
+const sidebar = docs.map(c=> {
+	return {
+		link: c.id,
+		render: c.render,
+	}
+})
+
+console.log(docs)
+
+// 从集合中获取单个条目。
+// 需要集合的名称以及
+// 条目 `slug`（内容集合）或 `id`（数据集合）
+// 示例：检索 `src/content/authors/grace-hopper.json`
+
+
+const { title} =  Astro.props
+---
+
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		
+		<LayoutDefault title={title}>
+			
+		</div>
+	</body>
+</html>

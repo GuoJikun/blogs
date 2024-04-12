@@ -1,3 +1,5 @@
 {
-    "prettier.tabWidth": 4
+    "cSpell.words": [
+        "astro"
+    ]
 }

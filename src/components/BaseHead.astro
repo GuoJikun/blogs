@@ -1,0 +1,25 @@
+---
+const { title } = Astro.props
+---
+
+<div class="layout-header">
+    <div>
+        <span>{title}</span>
+    </div>
+    <div>
+        <div>nav</div>
+        <div>Dark/light</div>
+        <div>Links</div>
+    </div>
+
+</div>
+
+<style>
+.layout-header{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    height: 60px;
+}
+</style>
