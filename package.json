@@ -16,7 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "sass": "^1.71.1",
-    "vitepress": "1.2.0",
+    "vitepress": "1.2.2",
     "vue": "^3.4.19"
   },
   "dependencies": {
