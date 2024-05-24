@@ -1,25 +1,32 @@
 <script setup>
-    import { ref, watch } from "vue";
+import { ref, watch } from "vue";
 
-    import DefaultTheme from "vitepress/theme";
-    const { Layout } = DefaultTheme;
-    import { useData, useRoute } from "vitepress";
-    const { isDark } = useData();
+import DefaultTheme from "vitepress/theme";
+const { Layout } = DefaultTheme;
+import { useData, useRoute } from "vitepress";
+const { isDark } = useData();
 
-    const route = useRoute();
-    const showComment = ref(true);
-    watch(
-        () => route.path,
-        () => {
+import envConfig from "../config/env.js";
+const isDev = import.meta.env.DEV;
+
+const route = useRoute();
+const showComment = ref(true);
+watch(
+    () => route.path,
+    () => {
+        if (isDev) {
             showComment.value = false;
-            setTimeout(() => {
-                showComment.value = true;
-            }, 200);
-        },
-        {
-            immediate: true,
+            return;
         }
-    );
+        showComment.value = false;
+        setTimeout(() => {
+            showComment.value = true;
+        }, 200);
+    },
+    {
+        immediate: true,
+    }
+);
 </script>
 
 <template>
@@ -32,10 +39,10 @@
                     is="script"
                     src="https://giscus.app/client.js"
                     data-id="comments"
-                    data-repo="guojikun/blog-vuepress"
-                    data-repo-id="MDEwOlJlcG9zaXRvcnkzOTUyNzM1NDg="
-                    data-category="评论"
-                    data-category-id="DIC_kwDOF49lTM4CV3Gn"
+                    :data-repo="envConfig.repo"
+                    :data-repo-id="envConfig.repoId"
+                    :data-category="envConfig.category"
+                    :data-category-id="envConfig.categoryId"
                     data-mapping="url"
                     data-strict="1"
                     data-reactions-enabled="1"
@@ -45,8 +52,7 @@
                     data-lang="zh-CN"
                     data-crossorigin="anonymous"
                     data-loading="lazy"
-                    async
-                ></component>
+                    async></component>
             </div>
         </template>
     </Layout>
