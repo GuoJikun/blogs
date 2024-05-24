@@ -48,7 +48,7 @@ jobs:
       - name: generate config/env file
         env:
           GISCUS_TOKEN: ${{ secrets.GISCUS_CONFIG }}
-        run: echo "$ACCESS_TOKEN" > ./src/.vitepress/config/env.js
+        run: echo "$ACCESS_TOKEN" > ./src/.vitepress/config/env.js && cat ./src/.vitepress/config/env.js
       - name: Build with VitePress
         run: pnpm run build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
