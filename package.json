@@ -1,31 +1,37 @@
 {
   "name": "blogs",
   "version": "1.0.0",
-  "description": "",
+  "description": "个人博客",
   "type": "module",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "dev": "vitepress dev src --port 9010",
-    "build": "vitepress build src",
-    "preview": "vitepress preview src --port 9011"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "author": "GuoJiKun",
   "license": "MIT",
-  "devDependencies": {
-    "sass": "^1.71.1",
-    "vitepress": "1.2.2",
-    "vue": "^3.4.19"
-  },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
     "@giscus/vue": "^2.4.0",
     "@jkun/contextmenu": "^1.0.1",
     "@jkun/watermark-vue": "^1.2.1",
+    "@nuxt/content": "^2.12.1",
+    "@nuxt/image": "^1.7.0",
     "element-plus": "^2.5.6",
     "fox-preview-image": "^2.9.0",
+    "nuxt": "^3.11.2",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2",
     "yak-barcode": "^1.1.1"
+  },
+  "packageManager": "pnpm@9.1.4+sha512.9df9cf27c91715646c7d675d1c9c8e41f6fce88246f1318c1aa6a1ed1aeb3c4f032fcdf4ba63cc69c4fe6d634279176b5358727d8f2cc1e65b65f43ce2f8bfb0",
+  "devDependencies": {
+    "sass": "^1.77.4"
   }
 }
