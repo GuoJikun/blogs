@@ -6,6 +6,7 @@ export default defineNuxtConfig({
         port: 9010,
     },
     content: {
+        documentDriven: true,
         highlight: {
             theme: {
                 // Default theme (same as single string)

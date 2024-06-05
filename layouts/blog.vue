@@ -1,6 +1,10 @@
 <template>
     <div class="layout-blog">
-        <slot />
+        <layout-header />
+        <div>
+            <slot />
+        </div>
+        <layout-footer />
     </div>
 </template>
 
