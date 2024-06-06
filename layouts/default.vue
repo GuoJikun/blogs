@@ -3,7 +3,7 @@
 <template>
     <div class="layout-default">
         <layout-header />
-        <div>
+        <div class="layout-default-content">
             <slot />
         </div>
         <layout-footer />

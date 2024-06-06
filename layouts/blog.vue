@@ -1,7 +1,7 @@
 <template>
     <div class="layout-blog">
         <layout-header />
-        <div>
+        <div class="layout-blog-content">
             <slot />
         </div>
         <layout-footer />
@@ -10,8 +10,11 @@
 
 <style lang="scss">
 .layout-blog {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
+    &-content {
+        padding: 12px 24px;
+    }
 }
 </style>

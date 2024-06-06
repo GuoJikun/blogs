@@ -1,3 +1,7 @@
+---
+layout: doc
+---
+
 # yak-barcode 条形码
 
 一个适用于 vue3 的条形码生成器，利用 `jabarcode`

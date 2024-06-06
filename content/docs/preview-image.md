@@ -1,3 +1,7 @@
+---
+layout: doc
+---
+
 # fox-preview-image 图片预览
 
 ## 安装

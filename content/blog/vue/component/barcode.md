@@ -20,10 +20,9 @@
 
 ```html
 <yak-barcode
-  text="65556845641"
-  tag="svg"
-  :options="{displayValue:false}"
-></yak-barcode>
+    text="65556845641"
+    tag="svg"
+    :options="{displayValue:false}"></yak-barcode>
 ```
 
 ## 更改条码的颜色
@@ -36,8 +35,7 @@
 
 ```html
 <yak-barcode
-  text="65556845641"
-  tag="svg"
-  :options="{ lineColor: `#409eff`}"
-></yak-barcode>
+    text="65556845641"
+    tag="svg"
+    :options="{ lineColor: `#409eff`}"></yak-barcode>
 ```

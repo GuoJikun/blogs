@@ -5,7 +5,11 @@ definePageMeta({
 </script>
 
 <template>
-    <main>
+    <main class="markdown">
         <ContentDoc :path="$route.path" />
     </main>
 </template>
+
+<style lang="scss">
+
+</style>
