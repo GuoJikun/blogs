@@ -1,27 +1,23 @@
 <script setup lang="ts">
-const colorMode = useColorMode();
-const options = [
-    { key: "light", label: "光" },
-    { key: "dark", label: "暗" },
-];
+import { Sunny, Moon } from "@element-plus/icons-vue";
 
-const handleSelect = (key, option) => {
-    console.log(option);
-    colorMode.preference = key;
-    colorMode.value = option.label;
-    console.log(colorMode.value);
-};
+const color = useColorMode();
+const colorMode = computed({
+    get: () => color.value === "dark",
+    set: () => (color.preference = color.value === "dark" ? "light" : "dark"),
+});
 </script>
 
 <template>
     <div>
-        <n-switch
-            v-model:value="colorMode.preference"
-            checked-value="dark"
-            unchecked-value="light">
-            <template #checked>暗</template>
-            <template #unchecked>光</template>
-        </n-switch>
+        <ClientOnly>
+            <el-switch
+                style="--el-switch-on-color: var(--el-border-color)"
+                v-model="colorMode"
+                inline-prompt
+                :active-action-icon="Moon"
+                :inactive-action-icon="Sunny"></el-switch>
+        </ClientOnly>
     </div>
 </template>
 

@@ -9,7 +9,7 @@ export default defineNuxtConfig({
         "@nuxt/image",
         "@nuxt/content",
         "@nuxtjs/color-mode",
-        "nuxtjs-naive-ui",
+        "@element-plus/nuxt",
     ],
     devServer: {
         port: 9010,
@@ -48,5 +48,10 @@ export default defineNuxtConfig({
                 resolvers: [NaiveUiResolver()],
             }),
         ],
+    },
+    elementPlus: {
+        icon: 'ElIcon',
+        importStyle: 'scss',
+        themes: ['dark'],
     },
 });
