@@ -10,14 +10,8 @@ export default [
     {
         text: "框架",
         items: [
-            {
-                text: "StencilJs",
-                link: "/framework/stenciljs/",
-            },
-            {
-                text: "Vue",
-                link: "/framework/vue/",
-            },
+            { text: "StencilJs", link: "/framework/stenciljs/" },
+            { text: "Vue", link: "/framework/vue/" },
         ],
     },
     {
@@ -26,20 +20,11 @@ export default [
             {
                 text: "数据结构与算法",
                 items: [
-                    {
-                        text: "数据结构",
-                        link: "/data-structure/list",
-                    },
-                    {
-                        text: "LeetCode",
-                        link: "/data-structure/topic/",
-                    },
+                    { text: "数据结构", link: "/data-structure/list" },
+                    { text: "LeetCode", link: "/data-structure/topic/" },
                 ],
             },
-            {
-                text: "设计模式",
-                link: "/design-pattern/",
-            },
+            { text: "设计模式", link: "/design-pattern/" },
         ],
     },
 
@@ -47,38 +32,21 @@ export default [
         text: "文档",
         // link: "/docs/readme",
         items: [
-            {
-                text: "Volta 中文文档",
-                link: "https://volta.jikun.dev",
-            },
-            {
-                text: "StencilJs 中文文档",
-                link: "https://stenciljs.jikun.dev",
-            },
+            { text: "Volta 中文文档", link: "https://volta.jikun.dev" },
+            { text: "StencilJs 中文文档", link: "https://stenciljs.jikun.dev" },
             {
                 text: "@ivy-design/ce 文档",
                 link: "https://ce.ivy-design.press",
             },
-            {
-                text: "watermark 水印",
-                link: "/docs/watermark-vue",
-            },
-            {
-                text: "previewImage 图片预览",
-                link: "/docs/preview-image",
-            },
-            {
-                text: "barcode 条形码",
-                link: "/docs/barcode",
-            },
+            { text: "watermark 水印", link: "/docs/watermark-vue" },
+            { text: "previewImage 图片预览", link: "/docs/preview-image" },
+            { text: "barcode 条形码", link: "/docs/barcode" },
         ],
     },
     {
-        text: "小工具",
-        link: "/tools/readme",
+        text: "Demo",
+        link: "https://demo.jikun.dev",
     },
-    {
-        text: "其他",
-        link: "/other/wsl",
-    },
+    { text: "小工具", link: "/tools/readme" },
+    { text: "其他", link: "/other/wsl" },
 ];

@@ -181,18 +181,9 @@ export default {
         {
             text: "组件文档",
             items: [
-                {
-                    text: "watermark 水印",
-                    link: "/docs/watermark-vue",
-                },
-                {
-                    text: "previewImage 图片预览",
-                    link: "/docs/preview-image",
-                },
-                {
-                    text: "barcode 条形码",
-                    link: "/docs/barcode",
-                },
+                { text: "watermark 水印", link: "/docs/watermark-vue" },
+                { text: "previewImage 图片预览", link: "/docs/preview-image" },
+                { text: "barcode 条形码", link: "/docs/barcode" },
             ],
         },
     ],
@@ -200,9 +191,9 @@ export default {
         {
             text: "其它",
             items: [
-                { text: "win11安装 wslg", link: "/other/wsl" },
+                { text: "win11 安装 wslg", link: "/other/wsl" },
                 {
-                    text: "搭建私有Npm仓库",
+                    text: "搭建私有 Npm 仓库",
                     link: "/other/private-npm-repository",
                 },
                 { text: "win10 激活", link: "/other/activation-win10" },
@@ -212,17 +203,18 @@ export default {
                     link: "/other/disabled-upgrade",
                 },
                 { text: "Markdown 基础语法", link: "/other/md" },
+                { text: "Windows 终端代理", link: "/other/terminal-proxy" },
                 {
-                    text: "Windows终端代理",
-                    link: "/other/terminal-proxy",
-                },
-                {
-                    text: "更改wsl的安装位置",
+                    text: "更改 wsl 的安装位置",
                     link: "/other/move-wsl-install-dir",
                 },
                 {
-                    text: "使用jenkins一键发布vue项目",
+                    text: "使用 jenkins 发布 vue 项目",
                     link: "/other/jenkins-vue",
+                },
+                {
+                    text: "在 jenkins 中添加参数化构建",
+                    link: "/other/jenkins-plugin-git-params",
                 },
                 {
                     text: "decimal.js 的使用",
