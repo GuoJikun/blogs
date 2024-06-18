@@ -5,9 +5,6 @@ import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 import zhCn from "element-plus/es/locale/lang/zh-cn";
 
-import watermark from "@jkun/watermark-vue/dist/watermark.js";
-import "@jkun/watermark-vue/dist/index.css";
-
 import { Copy } from "../directives/copy/index.js";
 import contextmenu from "@jkun/contextmenu";
 import "@jkun/contextmenu/dist/style.css";
@@ -23,6 +20,5 @@ export default {
         ctx.app.use(ElementPlus, { locale: zhCn });
         ctx.app.directive("copy", Copy);
         ctx.app.use(contextmenu, { type: "both" });
-        ctx.app.use(watermark);
     },
 };

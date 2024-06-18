@@ -17,10 +17,7 @@ const ecma = {
     text: "ECMAScript 标准",
     collapsed: true,
     items: [
-        {
-            text: "ECMA 2024",
-            link: "/basic/ecma/2024",
-        },
+        { text: "ECMA 2024", link: "/basic/ecma/2024" },
         { text: "ECMA 2023", link: "/basic/ecma/2023" },
         { text: "ECMA 2022", link: "/basic/ecma/2022" },
         { text: "ECMA 2021", link: "/basic/ecma/2021" },
@@ -41,23 +38,23 @@ const stencilJs = {
             link: "/framework/stenciljs/learn",
         },
         {
-            text: "StencilJs学习之JSX",
+            text: "StencilJs 学习之 JSX",
             link: "/framework/stenciljs/jsx",
         },
         {
-            text: "StencilJs学习之事件",
+            text: "StencilJs 学习之事件",
             link: "/framework/stenciljs/event",
         },
         {
-            text: "StencilJs学习之装饰器",
+            text: "StencilJs 学习之装饰器",
             link: "/framework/stenciljs/decorator",
         },
         {
-            text: "StencilJs学习之生命周期",
+            text: "StencilJs 学习之生命周期",
             link: "/framework/stenciljs/lifecycle",
         },
         {
-            text: "StencilJs学习之搭建项目",
+            text: "StencilJs 学习之搭建项目",
             link: "/framework/stenciljs/create",
         },
     ],
@@ -174,16 +171,6 @@ export default {
             items: [
                 { text: "阴影生成器", link: "/tools/shadow" },
                 { text: "文件转Base64", link: "/tools/file-to-base64" },
-            ],
-        },
-    ],
-    "/docs/": [
-        {
-            text: "组件文档",
-            items: [
-                { text: "watermark 水印", link: "/docs/watermark-vue" },
-                { text: "previewImage 图片预览", link: "/docs/preview-image" },
-                { text: "barcode 条形码", link: "/docs/barcode" },
             ],
         },
     ],

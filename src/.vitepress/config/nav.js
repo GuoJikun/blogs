@@ -30,18 +30,7 @@ export default [
 
     {
         text: "文档",
-        // link: "/docs/readme",
-        items: [
-            { text: "Volta 中文文档", link: "https://volta.jikun.dev" },
-            { text: "StencilJs 中文文档", link: "https://stenciljs.jikun.dev" },
-            {
-                text: "@ivy-design/ce 文档",
-                link: "https://ce.ivy-design.press",
-            },
-            { text: "watermark 水印", link: "/docs/watermark-vue" },
-            { text: "previewImage 图片预览", link: "/docs/preview-image" },
-            { text: "barcode 条形码", link: "/docs/barcode" },
-        ],
+        link: "https://docs.jikun.dev/",
     },
     {
         text: "Demo",

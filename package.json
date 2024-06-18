@@ -23,9 +23,6 @@
     "@element-plus/icons-vue": "^2.3.1",
     "@giscus/vue": "^2.4.0",
     "@jkun/contextmenu": "^1.0.1",
-    "@jkun/watermark-vue": "^1.2.1",
-    "element-plus": "^2.5.6",
-    "fox-preview-image": "^2.9.0",
-    "yak-barcode": "^1.1.1"
+    "element-plus": "^2.5.6"
   }
 }
