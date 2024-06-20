@@ -6,9 +6,29 @@
 
 Sentry 有 [开源版](https://github.com/getsentry/self-hosted) 和 [Sass](https://sentry.io/) 版 ，可根据自身需要去选择。
 
-## 部署
+## Sentry 简介
+
+Sentry 是一个开发人员优先的错误跟踪和性能监控平台。
+
+如何充分利用 Sentry：
+
+-   连接代码库，确保还设置了源代码管理集成和源映射（如果适用）。这将允许 Sentry 通过可读的堆栈跟踪和可疑提交将错误和性能问题直接链接到有问题的代码行。
+-   设置警报，以确保您知道您关心的事情何时出错。您可以选择通过我们的聊天集成之一（如 Slack 或 Discord）接收提醒。查看我们的警报最佳做法，了解如何仅接收相关通知。
+-   自定义发现、仪表板和查询，以更好地控制应用出现问题时获得的见解类型。最后，创建针对您的用例量身定制的自定义标签，以便进行更精细的搜索和查询。
+
+## Sentry 私有化部署
 
 私有化部署官方推荐方式是通过 Docker 和 Docker Compose 部署，具体参考[官方文档](https://develop.sentry.dev/self-hosted/)
+
+### 前置条件
+
+-   Docker 19.03.6+
+-   Compose 2.19.0+
+-   4 CPU Cores
+-   16 GB RAM
+-   20 GB Free Disk Space
+
+### 下载和安装
 
 ```zsh
 # linux 环境
