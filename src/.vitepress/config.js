@@ -20,6 +20,15 @@ export default defineConfig({
             {},
             `LA.init({id:"3F6JYEKcOZnT1i9e",ck:"3F6JYEKcOZnT1i9e", hashMode: true})`,
         ],
+        [
+            "script",
+            {},
+            `(function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "mvabepuoj9");`,
+        ],
     ],
     lastUpdated: true,
     themeConfig: {
