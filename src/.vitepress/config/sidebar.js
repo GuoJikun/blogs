@@ -215,6 +215,10 @@ export default {
                     text: "Web 前端工程的装机必备软件",
                     link: "/other/windows-env-setting",
                 },
+                {
+                    text: "VMware 虚拟机共享宿主机代理",
+                    link: "/other/share-host-proxy",
+                },
             ],
         },
     ],
