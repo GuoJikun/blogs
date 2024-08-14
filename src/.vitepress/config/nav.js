@@ -1,10 +1,11 @@
 export default [
     {
-        text: "Web 基础",
+        text: "基础知识",
         items: [
             { text: "HTML & CSS", link: "/basic/filter" },
             { text: "JavaScript", link: "/basic/js/error-type" },
             { text: "ECMA", link: "/basic/ecma/" },
+            { text: "Rust", link: "/basic/rust/" },
         ],
     },
     {
