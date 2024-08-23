@@ -6,7 +6,12 @@ export default defineConfig({
     base: "/",
     lang: "zh-CN",
     title: "前端小栈",
+
     titleTemplate: false,
+
+    lastUpdated: true,
+    metaChunk: true,
+
     head: [
         [
             "script",
@@ -31,7 +36,7 @@ export default defineConfig({
             })(window, document, "clarity", "script", "mvabepuoj9");`,
         ],
     ],
-    lastUpdated: true,
+
     themeConfig: {
         home: "/index.md",
         logo: "https://vuejs.org/images/logo.png",
@@ -97,6 +102,16 @@ export default defineConfig({
             return items.filter(
                 (item) => item.url !== "auth/cnblog/callback.html"
             );
+        },
+    },
+
+    markdown: {
+        container: {
+            tipLabel: "提示",
+            warningLabel: "警告",
+            dangerLabel: "危险",
+            infoLabel: "信息",
+            detailsLabel: "详细信息",
         },
     },
 });
