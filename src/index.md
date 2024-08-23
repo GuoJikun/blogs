@@ -1,25 +1,33 @@
 ---
 sidebar: false
 layout: home
+
+hero:
+    name: 前端小栈
+    text: 欢迎任何人共建
+    tagline: 这是一个基于 vitepress 搭建的博客类，主要分享一些 Web 相关的知识
+features:
+    - title: Web 知识
+      details: 主要包括 html、css、JavaScript 相关的知识和常见的工具函数
+
+    - title: 框架
+      details: 主要包括 vue 框架和 Stencil 框架
+
+    - title: 数据结构与算法
+      details: 一些常见数据结构的 JavaScript 实现和基础算法(sort,hash)
+
+    - title: 设计模式
+      details: 常见设计模式的 javascript 实现
+
+    - title: 工具
+      details: 会逐渐补充一些前端开发用的到的小工具
+
+    - title: 文档
+      details: 开发的组件的使用说明和一些框架的文档翻译
+
+    - title: 其他
+      details: 不包含上面的其他内容
 ---
-
-# 个人博客
-
-::: tip 说明
-这是一个基础 `vitepress` 搭建的个人博客类站点，主要分享一些 `html`、`css`、`JavaScript`、`wasm`、`ECMAScript` 方面的知识
-
-PS：欢迎任何人共建
-:::
-
-## 模块划分
-
--   Web 基础：主要包括`html`、`css`、`JavaScript`相关的知识和常见的 `utils` 函数
--   框架：主要包括 vue 框架和 Stencil 框架
--   数据结构与算法：一些常见数据结构的 JavaScript 实现和基础算法(sort,hash)
--   设计模式：常见设计模式的 javascript 实现
--   小工具：会逐渐补充一些前端开发用的到的小工具
--   文档：开发的组件的使用说明和一些工具框架的文档翻译
--   其他：不包含上面的其他内容
 
 ## 快速开始
 
