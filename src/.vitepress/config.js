@@ -6,6 +6,7 @@ export default defineConfig({
     base: "/",
     lang: "zh-CN",
     title: "前端小栈",
+    titleTemplate: false,
     head: [
         [
             "script",
@@ -39,9 +40,17 @@ export default defineConfig({
             pattern:
                 "https://github.com/GuoJikun/blog-vuepress/edit/main/src/:path",
         },
-        lastUpdatedText: "最后更新时间",
-        outline: [2, 3],
-        outlineTitle: "目录",
+        lastUpdated: {
+            text: "最后更新于",
+            formatOptions: {
+                dateStyle: "short",
+                timeStyle: "medium",
+            },
+        },
+        outline: {
+            level: [2, 3],
+            label: "章节目录",
+        },
         nav: navbar,
         socialLinks: [
             {
@@ -66,6 +75,13 @@ export default defineConfig({
                 indexName: "jikun",
             },
         },
+
+        langMenuLabel: "多语言",
+        returnToTopLabel: "回到顶部",
+        sidebarMenuLabel: "菜单",
+        darkModeSwitchLabel: "主题",
+        lightModeSwitchTitle: "切换到浅色模式",
+        darkModeSwitchTitle: "切换到深色模式",
     },
     vue: {
         template: {
