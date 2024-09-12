@@ -65,7 +65,11 @@ export default [
                 text: "手写new,bind,call,apply",
                 link: "/basic/js/p2021091402",
             },
-            { text: "获取滚动条宽度", link: "/basic/scrollbar-width" },
+            { text: "获取滚动条宽度", link: "/basic/js/scrollbar-width" },
+            {
+                text: "在 Web 中判断页面是不是刷新",
+                link: "/basic/js/page-is-refresh",
+            },
         ],
     },
     rust,

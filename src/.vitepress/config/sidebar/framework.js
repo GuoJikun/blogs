@@ -29,6 +29,15 @@ const stencilJs = {
     ],
 };
 
+const tauri = {
+    text: "Tauri 框架",
+    collapsed: false,
+    items: [
+        { text: "windows 上 Tauri 开发环境配置", link: "/framework/tauri/env" },
+        { text: "创建 Tauri 项目", link: "/framework/tauri/create" },
+    ],
+};
+
 export default [
     {
         text: "Vue",
@@ -51,4 +60,5 @@ export default [
     },
 
     stencilJs,
+    tauri,
 ];

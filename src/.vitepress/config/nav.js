@@ -13,6 +13,7 @@ export default [
         items: [
             { text: "StencilJs", link: "/framework/stenciljs/" },
             { text: "Vue", link: "/framework/vue/" },
+            { text: "Tauri", link: "/framework/tauri/create" },
         ],
     },
     {
