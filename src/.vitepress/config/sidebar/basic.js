@@ -39,6 +39,10 @@ export default [
             { text: "Scss之extend和mixin", link: "/basic/p2021091401" },
             { text: "Css 之 contain", link: "/basic/contain" },
             { text: "自定义滚动条样式", link: "/basic/scrollbar" },
+            {
+                text: "声明式 Shadow DOM：简化 Web 组件开发的新工具",
+                link: "/basic/html/declarative-shadowdom",
+            },
         ],
     },
     {
