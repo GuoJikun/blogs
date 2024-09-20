@@ -70,6 +70,14 @@ export default [
                 text: "在 Web 中判断页面是不是刷新",
                 link: "/basic/js/page-is-refresh",
             },
+            {
+                text: "使用 Wake Lock API：保持设备唤醒的最佳实践",
+                link: "/basic/js/webapi-wakelock",
+            },
+            {
+                text: "使用 Wake Lock API：保持设备唤醒的最佳实践",
+                link: "/basic/js/webapi-page-visibility",
+            },
         ],
     },
     rust,
