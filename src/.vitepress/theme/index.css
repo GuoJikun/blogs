@@ -103,3 +103,9 @@ p.sidebar-item:not(.sidebar-heading) {
 .padding-left-large {
     padding-left: 24px;
 }
+
+/*重置首页Features区域的样式*/
+.VPHomeFeatures .box {
+    background-color: transparent;
+    overflow: auto;
+}
