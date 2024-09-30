@@ -8,8 +8,6 @@
 
 本文将详细介绍声明式 Shadow DOM 的基础语法、与 Javascript 的结合使用以及其主要应用场景和优势。
 
----
-
 ## 一、什么是 Shadow DOM？
 
 Shadow DOM 是 Web 组件的一个重要组成部分，它通过创建封装的 DOM 树，让组件的内部 DOM 和样式与外部页面隔离。这使得组件可以拥有独立的样式和功能，而不会与页面的其他部分发生冲突。
@@ -21,7 +19,7 @@ Shadow DOM 是 Web 组件的一个重要组成部分，它通过创建封装的 
 声明式 Shadow DOM 允许开发人员直接在 HTML 模板中定义 Shadow DOM，而无需通过 JavaScript 来创建。
 这种方式依赖于 HTML 中的 `<template>` 标签，并通过 `shadowroot` 属性来指定 DOM 应作为 Shadow DOM 存在。
 
-### 示例代码：
+### 示例代码
 
 ```html
 <my-element>
