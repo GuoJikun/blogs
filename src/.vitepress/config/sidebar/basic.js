@@ -79,7 +79,7 @@ export default [
                 link: "/basic/js/webapi-wakelock",
             },
             {
-                text: "使用 Wake Lock API：保持设备唤醒的最佳实践",
+                text: "利用 Page Visibility API 优化网页性能与用户体验",
                 link: "/basic/js/webapi-page-visibility",
             },
         ],
