@@ -16,9 +16,9 @@
 
 ```bash
 - Clone the https://github.com/GuoJikun/blogs.git
-- Install package yarn install
-- Development run yarn run dev
-- Open http://localhost:8080 in your browser.
+- Install package pnpm install
+- Development run pnpm dev
+- Open http://localhost:9010 in your browser.
 ```
 
 ## Contributing
