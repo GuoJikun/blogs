@@ -15,15 +15,15 @@
   "author": "GuoJiKun",
   "license": "MIT",
   "devDependencies": {
-    "sass": "^1.82.0",
-    "vitepress": "1.5.0",
-    "vue": "^3.5.13"
+    "sass": "^1.93.2",
+    "vitepress": "1.6.4",
+    "vue": "^3.5.22"
   },
   "dependencies": {
-    "@element-plus/icons-vue": "^2.3.1",
-    "@giscus/vue": "^3.0.0",
+    "@element-plus/icons-vue": "^2.3.2",
+    "@giscus/vue": "^3.1.1",
     "@jkun/contextmenu": "^1.0.1",
-    "element-plus": "^2.9.0"
+    "element-plus": "^2.11.4"
   },
   "volta": {
     "node": "20.17.0",

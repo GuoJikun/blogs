@@ -35,6 +35,7 @@ const tauri = {
     items: [
         { text: "windows 上 Tauri 开发环境配置", link: "/framework/tauri/env" },
         { text: "创建 Tauri 项目", link: "/framework/tauri/create" },
+        { text: "Tauri 应用升级", link: "/framework/tauri/updater" },
     ],
 };
 
