@@ -2,6 +2,7 @@ const ecma = {
     text: "ECMAScript 标准",
     collapsed: true,
     items: [
+        { text: "ECMA 2025", link: "/basic/ecma/2025" },
         { text: "ECMA 2024", link: "/basic/ecma/2024" },
         { text: "ECMA 2023", link: "/basic/ecma/2023" },
         { text: "ECMA 2022", link: "/basic/ecma/2022" },
