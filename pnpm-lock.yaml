@@ -14,9 +14,6 @@ importers:
       '@giscus/vue':
         specifier: ^3.1.1
         version: 3.1.1(vue@3.5.22)
-      '@jkun/contextmenu':
-        specifier: ^1.0.1
-        version: 1.0.1(vue@3.5.22)
       element-plus:
         specifier: ^2.11.4
         version: 2.11.4(vue@3.5.22)
@@ -315,11 +312,6 @@ packages:
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
-
-  '@jkun/contextmenu@1.0.1':
-    resolution: {integrity: sha512-zBBcovyuPZLnYu2+RoQ95tgLBGn46ztj0CWHpxAB4qXga6JogxPK53DPtg6jPoY6zI1b56ZQ+MwccbhvIEi3ig==}
-    peerDependencies:
-      vue: ^3.2.37
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
@@ -1316,10 +1308,6 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify/types@2.0.0': {}
-
-  '@jkun/contextmenu@1.0.1(vue@3.5.22)':
-    dependencies:
-      vue: 3.5.22
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 

@@ -22,11 +22,10 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.2",
     "@giscus/vue": "^3.1.1",
-    "@jkun/contextmenu": "^1.0.1",
     "element-plus": "^2.11.4"
   },
   "volta": {
-    "node": "20.17.0",
-    "pnpm": "9.10.0"
+    "node": "24.11.0",
+    "pnpm": "10.20.0"
   }
 }
