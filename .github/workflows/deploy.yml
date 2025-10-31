@@ -44,7 +44,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
-        run: pnpm install # 或 pnpm install / yarn install / bun install
+        run: pnpm install --registry https://registry.npmjs.org/
       - name: generate config/env file
         env:
           GISCUS_TOKEN: ${{ secrets.GISCUS_CONFIG }}
