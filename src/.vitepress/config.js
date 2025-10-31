@@ -35,6 +35,13 @@ export default defineConfig({
                 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "mvabepuoj9");`,
         ],
+        [
+            "script",
+            {
+                src: "/preview.js",
+                charset: "UTF-8",
+            },
+        ],
     ],
 
     themeConfig: {
