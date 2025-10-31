@@ -457,17 +457,27 @@ class ImagePreview extends HTMLElement {
 // 注册 Web Component
 customElements.define("image-preview", ImagePreview);
 
-// 创建全局实例
-const globalImagePreview = document.createElement("image-preview");
-document.body.appendChild(globalImagePreview);
+// 全局实例变量
+let globalImagePreview = null;
+
+// 获取或创建全局实例
+function getGlobalImagePreview() {
+    if (!globalImagePreview) {
+        globalImagePreview = document.createElement("image-preview");
+        document.body.appendChild(globalImagePreview);
+    }
+    return globalImagePreview;
+}
 
 // 全局方法
 window.$nativePreview = {
     open(src, alt = "") {
-        globalImagePreview.show(src, alt);
+        getGlobalImagePreview().show(src, alt);
     },
     close() {
-        globalImagePreview.close();
+        if (globalImagePreview) {
+            globalImagePreview.close();
+        }
     },
 };
 
