@@ -45,6 +45,10 @@ const other = [
                 text: "VMware 虚拟机共享宿主机代理",
                 link: "/other/share-host-proxy",
             },
+            {
+                text: "一键配置 Web 前端开发环境",
+                link: "/other/web-env-setup",
+            },
         ],
     },
 ];
